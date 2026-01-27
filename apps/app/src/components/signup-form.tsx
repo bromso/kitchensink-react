@@ -1,0 +1,219 @@
+"use client"
+
+import { zodResolver } from "@hookform/resolvers/zod"
+import { Icon } from "@iconify/react"
+import { Button } from "@repo/ui/components/button"
+import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@repo/ui/components/card"
+import {
+  Form,
+  FormControl,
+  FormField,
+  FormItem,
+  FormLabel,
+  FormMessage,
+} from "@repo/ui/components/form"
+import { Input } from "@repo/ui/components/input"
+import { Separator } from "@repo/ui/components/separator"
+import { cn } from "@repo/ui/lib/utils"
+import Link from "next/link"
+import { useRouter } from "next/navigation"
+import { useState } from "react"
+import { useForm } from "react-hook-form"
+import { z } from "zod"
+import { signIn, signUp } from "@/lib/auth-client"
+
+const signupSchema = z
+  .object({
+    name: z.string().min(1, "Name is required").min(2, "Name must be at least 2 characters"),
+    email: z.string().min(1, "Email is required").email("Invalid email address"),
+    password: z
+      .string()
+      .min(1, "Password is required")
+      .min(8, "Password must be at least 8 characters"),
+    confirmPassword: z.string().min(1, "Please confirm your password"),
+  })
+  .refine((data) => data.password === data.confirmPassword, {
+    message: "Passwords don't match",
+    path: ["confirmPassword"],
+  })
+
+type SignupFormValues = z.infer<typeof signupSchema>
+
+export function SignupForm({ className, ...props }: React.ComponentPropsWithoutRef<"div">) {
+  const router = useRouter()
+  const [isLoading, setIsLoading] = useState(false)
+  const [error, setError] = useState<string | null>(null)
+
+  const form = useForm<SignupFormValues>({
+    resolver: zodResolver(signupSchema),
+    defaultValues: {
+      name: "",
+      email: "",
+      password: "",
+      confirmPassword: "",
+    },
+  })
+
+  async function onSubmit(data: SignupFormValues) {
+    setIsLoading(true)
+    setError(null)
+
+    try {
+      const result = await signUp.email({
+        name: data.name,
+        email: data.email,
+        password: data.password,
+      })
+
+      if (result.error) {
+        setError(result.error.message ?? "Failed to create account")
+        return
+      }
+
+      router.push("/")
+      router.refresh()
+    } catch (err) {
+      console.error("Signup error:", err)
+      setError(err instanceof Error ? err.message : "An unexpected error occurred")
+    } finally {
+      setIsLoading(false)
+    }
+  }
+
+  async function handleSocialSignIn(provider: "google" | "github" | "apple") {
+    setIsLoading(true)
+    setError(null)
+
+    try {
+      await signIn.social({
+        provider,
+        callbackURL: "/",
+      })
+    } catch {
+      setError(`Failed to sign up with ${provider}`)
+      setIsLoading(false)
+    }
+  }
+
+  return (
+    <section className={cn("flex flex-col gap-4", className)} {...props}>
+      <Card className="shadow-card">
+        <CardHeader className="text-center pb-4">
+          <CardTitle className="text-xl">Create an account</CardTitle>
+          <CardDescription>Sign up with your Apple or Google account</CardDescription>
+        </CardHeader>
+        <CardContent>
+          <div className="grid gap-4">
+            <div className="flex flex-col gap-3">
+              <Button
+                variant="outline"
+                className="w-full"
+                disabled={isLoading}
+                onClick={() => handleSocialSignIn("apple")}
+              >
+                <Icon icon="devicon:apple" width={24} height={24} />
+                Sign up with Apple
+              </Button>
+              <Button
+                variant="outline"
+                className="w-full"
+                disabled={isLoading}
+                onClick={() => handleSocialSignIn("google")}
+              >
+                <Icon icon="devicon:google" width={24} height={24} />
+                Sign up with Google
+              </Button>
+            </div>
+            <div className="relative">
+              <div className="absolute inset-0 flex items-center">
+                <Separator className="w-full" />
+              </div>
+              <div className="relative flex justify-center text-xs uppercase">
+                <span className="px-2 text-muted-foreground">Or continue with</span>
+              </div>
+            </div>
+            <Form {...form}>
+              <form onSubmit={form.handleSubmit(onSubmit)} className="grid gap-4">
+                {error && (
+                  <div className="text-sm text-destructive bg-destructive/10 p-3 rounded-md">
+                    {error}
+                  </div>
+                )}
+                <FormField
+                  control={form.control}
+                  name="name"
+                  render={({ field }) => (
+                    <FormItem className="grid gap-1.5">
+                      <FormLabel>Name</FormLabel>
+                      <FormControl>
+                        <Input placeholder="John Doe" disabled={isLoading} {...field} />
+                      </FormControl>
+                      <FormMessage />
+                    </FormItem>
+                  )}
+                />
+                <FormField
+                  control={form.control}
+                  name="email"
+                  render={({ field }) => (
+                    <FormItem className="grid gap-1.5">
+                      <FormLabel>Email</FormLabel>
+                      <FormControl>
+                        <Input
+                          type="email"
+                          placeholder="m@example.com"
+                          disabled={isLoading}
+                          {...field}
+                        />
+                      </FormControl>
+                      <FormMessage />
+                    </FormItem>
+                  )}
+                />
+                <FormField
+                  control={form.control}
+                  name="password"
+                  render={({ field }) => (
+                    <FormItem className="grid gap-1.5">
+                      <FormLabel>Password</FormLabel>
+                      <FormControl>
+                        <Input type="password" disabled={isLoading} {...field} />
+                      </FormControl>
+                      <FormMessage />
+                    </FormItem>
+                  )}
+                />
+                <FormField
+                  control={form.control}
+                  name="confirmPassword"
+                  render={({ field }) => (
+                    <FormItem className="grid gap-1.5">
+                      <FormLabel>Confirm Password</FormLabel>
+                      <FormControl>
+                        <Input type="password" disabled={isLoading} {...field} />
+                      </FormControl>
+                      <FormMessage />
+                    </FormItem>
+                  )}
+                />
+                <Button type="submit" className="w-full" disabled={isLoading}>
+                  {isLoading ? "Creating account..." : "Create account"}
+                </Button>
+              </form>
+            </Form>
+            <div className="text-center text-muted-foreground text-sm">
+              Already have an account?{" "}
+              <Link href="/login" className="underline underline-offset-4">
+                Sign in
+              </Link>
+            </div>
+          </div>
+        </CardContent>
+      </Card>
+      <div className="text-balance text-center text-xs text-muted-foreground [&_a]:underline [&_a]:underline-offset-4 [&_a]:hover:text-primary">
+        By clicking continue, you agree to our <Link href="/">Terms of Service</Link> and{" "}
+        <Link href="/">Privacy Policy</Link>.
+      </div>
+    </section>
+  )
+}

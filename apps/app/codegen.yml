@@ -1,0 +1,20 @@
+schema:
+  - "${SUPABASE_GRAPHQL_URL}":
+      headers:
+        apiKey: "${SUPABASE_API_KEY}"
+
+documents:
+  - "src/data/queries/users.ts"
+  - "src/data/queries/campaigns.ts"
+  - "src/data/queries/assets.ts"
+  - "!src/data/queries/index.ts"
+  - "!src/app/(dashboard)/test-graphql/**"
+
+generates:
+  src/gql/:
+    preset: client
+    presetConfig:
+      fragmentMasking: false
+
+config:
+  useTypeImports: true
