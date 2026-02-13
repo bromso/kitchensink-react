@@ -60,6 +60,34 @@ git commit -m "docs: :memo: update installation steps"
 | `perf` | :zap: | `:zap:` | Performance |
 | `build` | :construction_worker: | `:construction_worker:` | Build/CI |
 
+### Commit Category & Common Emojis
+
+| Category | Emoji | Code | Description |
+|----------|-------|------|-------------|
+| `ui` | :art: | `:art:` | UI/UX improvements |
+| `infrastructure` | :building_construction: | `:building_construction:` |
+| `api` | :gear: | `:gear:` | API changes |
+| `dependencies` | :package: | `:package:` | Dependency updates |
+| `docs` | :book: | `:book:` | Documentation updates |
+| `tests` | :test_tube: | `:test_tube:` | Testing improvements |
+| `ci` | :robot: | `:robot:` | CI/CD changes |
+| `config` | :wrench: | `:wrench:` | Configuration changes |
+| `security` | :lock: | `:lock:` | Security fixes |
+| localization | :globe_with_meridians: | `:globe_with_meridians:` | Localization/internationalization |
+| performance | :rocket: | `:rocket:` | Performance improvements |
+| accessibility | :wheelchair: | `:wheelchair:` | Accessibility improvements |
+| documentation | :page_facing_up: | `:page_facing_up:` | Documentation improvements |
+| testing | :microscope: | `:microscope:` | Testing improvements |
+| refactoring | :twisted_rightwards_arrows: | `:twisted_rightwards_arrows:` | Code refactoring |
+| tooling | :hammer_and_wrench: | `:hammer_and_wrench:` | Tooling changes |
+| experiments | :test_tube: | `:test_tube:` | Experimental code |
+| maintenance | :broom: | `:broom:` | Maintenance tasks |
+| release | :tada: | `:tada:` | Release commits |
+| documentation | :information_source: | `:information_source:` | Important information |
+| warning | :warning: | `:warning:` | Warnings or cautions |
+| bug | :beetle: | `:beetle:` | Bug-related changes |
+| enhancement | :sparkle: | `:sparkle:` | Enhancements or improvements |
+
 See the full [gitmoji reference](https://gitmoji.dev/) for more emojis.
 
 ## Git Hooks
