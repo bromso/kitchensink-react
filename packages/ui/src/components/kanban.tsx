@@ -12,11 +12,11 @@ import {
 } from "react"
 import { createPortal } from "react-dom"
 
-import { Button, buttonVariants } from "~/components/ui/button"
-import { Skeleton } from "~/components/ui/skeleton"
-import { Textarea } from "~/components/ui/textarea"
-import { Tooltip, TooltipContent, TooltipProvider, TooltipTrigger } from "~/components/ui/tooltip"
-import { cn } from "~/lib/utils"
+import { Button, buttonVariants } from "@repo/ui/components/button"
+import { Skeleton } from "@repo/ui/components/skeleton"
+import { Textarea } from "@repo/ui/components/textarea"
+import { Tooltip, TooltipContent, TooltipProvider, TooltipTrigger } from "@repo/ui/components/tooltip"
+import { cn } from "@repo/ui/lib/utils"
 
 /*
 Accessibility

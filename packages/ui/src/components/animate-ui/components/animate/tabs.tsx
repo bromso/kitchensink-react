@@ -1,17 +1,19 @@
+
+
 import {
-  TabsContent as TabsContentPrimitive,
-  type TabsContentProps as TabsContentPrimitiveProps,
-  TabsContents as TabsContentsPrimitive,
-  type TabsContentsProps as TabsContentsPrimitiveProps,
-  TabsHighlightItem as TabsHighlightItemPrimitive,
-  TabsHighlight as TabsHighlightPrimitive,
-  TabsList as TabsListPrimitive,
-  type TabsListProps as TabsListPrimitiveProps,
   Tabs as TabsPrimitive,
-  type TabsProps as TabsPrimitiveProps,
+  TabsList as TabsListPrimitive,
   TabsTrigger as TabsTriggerPrimitive,
+  TabsContent as TabsContentPrimitive,
+  TabsContents as TabsContentsPrimitive,
+  TabsHighlight as TabsHighlightPrimitive,
+  TabsHighlightItem as TabsHighlightItemPrimitive,
+  type TabsProps as TabsPrimitiveProps,
+  type TabsListProps as TabsListPrimitiveProps,
   type TabsTriggerProps as TabsTriggerPrimitiveProps,
-} from "@repo/components/animate-ui/primitives/animate/tabs"
+  type TabsContentProps as TabsContentPrimitiveProps,
+  type TabsContentsProps as TabsContentsPrimitiveProps,
+} from "@repo/ui/components/animate-ui/primitives/animate/tabs"
 import { cn } from "@repo/ui/lib/utils"
 
 type TabsProps = TabsPrimitiveProps

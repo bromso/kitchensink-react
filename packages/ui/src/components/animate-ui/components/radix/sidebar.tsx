@@ -1,33 +1,35 @@
 "use client"
 
-import {
-  Highlight,
-  HighlightItem,
-} from "@repo/ui/components/animate-ui/primitives/effects/highlight"
+import * as React from "react"
+import { Slot } from "radix-ui"
+import { cva, type VariantProps } from "class-variance-authority"
+import { PanelLeftIcon } from "lucide-react"
+import type { Transition } from "motion/react"
+
+import { useIsMobile } from "@repo/ui/hooks/use-mobile"
+import { cn } from "@repo/ui/lib/utils"
 import { Button } from "@repo/ui/components/button"
 import { Input } from "@repo/ui/components/input"
 import { Separator } from "@repo/ui/components/separator"
+import { Skeleton } from "@repo/ui/components/skeleton"
 import {
   Sheet,
   SheetContent,
   SheetDescription,
   SheetHeader,
   SheetTitle,
-} from "@repo/ui/components/sheet"
-import { Skeleton } from "@repo/ui/components/skeleton"
+} from "@repo/ui/components/animate-ui/components/radix/sheet"
 import {
+  TooltipProvider,
   Tooltip,
   TooltipContent,
-  TooltipProvider,
   TooltipTrigger,
-} from "@repo/ui/components/tooltip"
-import { useIsMobile } from "@repo/ui/hooks/use-mobile"
-import { cn } from "@repo/ui/lib/utils"
-import { cva, type VariantProps } from "class-variance-authority"
-import { PanelLeftIcon } from "lucide-react"
-import type { Transition } from "motion/react"
-import { Slot } from "radix-ui"
-import * as React from "react"
+} from "@repo/ui/components/animate-ui/components/animate/tooltip"
+import {
+  Highlight,
+  HighlightItem,
+} from "@repo/ui/components/animate-ui/primitives/effects/highlight"
+import { getStrictContext } from "@repo/ui/lib/get-strict-context"
 
 const SIDEBAR_COOKIE_NAME = "sidebar_state"
 const SIDEBAR_COOKIE_MAX_AGE = 60 * 60 * 24 * 7
@@ -46,15 +48,7 @@ type SidebarContextProps = {
   toggleSidebar: () => void
 }
 
-const SidebarContext = React.createContext<SidebarContextProps | null>(null)
-
-function useSidebar() {
-  const context = React.useContext(SidebarContext)
-  if (!context) {
-    throw new Error("useSidebar must be used within a SidebarProvider.")
-  }
-  return context
-}
+const [LocalSidebarProvider, useSidebar] = getStrictContext<SidebarContextProps>("SidebarContext")
 
 type SidebarProviderProps = React.ComponentProps<"div"> & {
   defaultOpen?: boolean
@@ -129,8 +123,8 @@ function SidebarProvider({
   )
 
   return (
-    <SidebarContext.Provider value={contextValue}>
-      <TooltipProvider delayDuration={0}>
+    <LocalSidebarProvider value={contextValue}>
+      <TooltipProvider openDelay={0}>
         <div
           data-slot="sidebar-wrapper"
           style={
@@ -149,7 +143,7 @@ function SidebarProvider({
           {children}
         </div>
       </TooltipProvider>
-    </SidebarContext.Provider>
+    </LocalSidebarProvider>
   )
 }
 
@@ -603,14 +597,9 @@ function SidebarMenuButton({
   }
 
   return (
-    <Tooltip>
+    <Tooltip side="right" align="center">
       <TooltipTrigger asChild>{button}</TooltipTrigger>
-      <TooltipContent
-        side="right"
-        align="center"
-        hidden={state !== "collapsed" || isMobile}
-        {...tooltip}
-      />
+      <TooltipContent hidden={state !== "collapsed" || isMobile} {...tooltip} />
     </Tooltip>
   )
 }

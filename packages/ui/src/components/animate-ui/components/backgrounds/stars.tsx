@@ -1,15 +1,16 @@
 "use client"
 
-import { cn } from "@repo/ui/lib/utils"
+import * as React from "react"
 import {
   type HTMLMotionProps,
   motion,
-  type SpringOptions,
-  type Transition,
   useMotionValue,
   useSpring,
+  type SpringOptions,
+  type Transition,
 } from "motion/react"
-import * as React from "react"
+
+import { cn } from "@repo/ui/lib/utils"
 
 type StarLayerProps = HTMLMotionProps<"div"> & {
   count: number
@@ -32,7 +33,7 @@ function StarLayer({
   count = 1000,
   size = 1,
   transition = { repeat: Infinity, duration: 50, ease: "linear" },
-  starColor = "#000",
+  starColor = "#fff",
   className,
   ...props
 }: StarLayerProps) {
@@ -84,7 +85,7 @@ function StarsBackground({
   factor = 0.05,
   speed = 50,
   transition = { stiffness: 50, damping: 20 },
-  starColor = "#000",
+  starColor = "#fff",
   pointerEvents = true,
   ...props
 }: StarsBackgroundProps) {
@@ -110,7 +111,7 @@ function StarsBackground({
     <div
       data-slot="stars-background"
       className={cn(
-        "relative size-full overflow-hidden bg-[radial-gradient(ellipse_at_bottom,_#e5e5e5_0%,_#fff_100%)]",
+        "relative size-full overflow-hidden bg-[radial-gradient(ellipse_at_bottom,_#262626_0%,_#000_100%)]",
         className
       )}
       onMouseMove={handleMouseMove}

@@ -1,8 +1,9 @@
 "use client"
 
-import { cn } from "@repo/ui/lib/utils"
-import { AnimatePresence, motion, type Transition } from "motion/react"
 import * as React from "react"
+import { AnimatePresence, motion, type Transition } from "motion/react"
+
+import { cn } from "@repo/ui/lib/utils"
 
 type HighlightMode = "children" | "parent"
 
@@ -41,8 +42,10 @@ type HighlightContextType<T extends string> = {
   forceUpdateBounds?: boolean
 }
 
-// biome-ignore lint/suspicious/noExplicitAny: Generic context requires any for dynamic typing
-const HighlightContext = React.createContext<HighlightContextType<any> | undefined>(undefined)
+const HighlightContext = React.createContext<
+  // eslint-disable-next-line @typescript-eslint/no-explicit-any
+  HighlightContextType<any> | undefined
+>(undefined)
 
 function useHighlight<T extends string>(): HighlightContextType<T> {
   const context = React.useContext(HighlightContext)
@@ -309,7 +312,6 @@ function Highlight<T extends React.ElementType = "div">({ ref, ...props }: Highl
           ? render(children)
           : render(
               React.Children.map(children, (child, index) => (
-                // biome-ignore lint/suspicious/noArrayIndexKey: Index is stable for children order
                 <HighlightItem key={index} className={props?.itemsClassName}>
                   {child}
                 </HighlightItem>

@@ -1,8 +1,8 @@
 "use client"
 
-import { cn } from "@repo/ui/lib/utils"
-import { type HTMLMotionProps, isMotionComponent, motion } from "motion/react"
 import * as React from "react"
+import { motion, isMotionComponent, type HTMLMotionProps } from "motion/react"
+import { cn } from "@repo/ui/lib/utils"
 
 type AnyProps = Record<string, unknown>
 
@@ -16,7 +16,7 @@ type WithAsChild<Base extends object> =
   | (Base & { asChild?: false | undefined })
 
 type SlotProps<T extends HTMLElement = HTMLElement> = {
-  // biome-ignore lint/suspicious/noExplicitAny: Required for slot pattern to accept any React element
+  // eslint-disable-next-line @typescript-eslint/no-explicit-any
   children?: any
 } & DOMMotionProps<T>
 

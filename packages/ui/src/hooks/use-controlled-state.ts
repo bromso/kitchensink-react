@@ -1,34 +1,33 @@
-"use client"
+import * as React from "react"
 
-import { useCallback, useRef, useState } from "react"
-
-interface UseControlledStateOptions<T> {
+interface CommonControlledStateProps<T> {
   value?: T
   defaultValue?: T
-  onChange?: (value: T) => void
 }
 
-export function useControlledState<T>({
-  value: controlledValue,
-  defaultValue,
-  onChange,
-}: UseControlledStateOptions<T>): [T, (value: T) => void] {
-  const [internalValue, setInternalValue] = useState<T>(defaultValue as T)
-  const isControlled = controlledValue !== undefined
-  const value = isControlled ? controlledValue : internalValue
+// eslint-disable-next-line @typescript-eslint/no-explicit-any
+export function useControlledState<T, Rest extends any[] = []>(
+  props: CommonControlledStateProps<T> & {
+    onChange?: (value: T, ...args: Rest) => void
+  }
+): readonly [T, (next: T, ...args: Rest) => void] {
+  const { value, defaultValue, onChange } = props
 
-  const onChangeRef = useRef(onChange)
-  onChangeRef.current = onChange
-
-  const setValue = useCallback(
-    (newValue: T) => {
-      if (!isControlled) {
-        setInternalValue(newValue)
-      }
-      onChangeRef.current?.(newValue)
-    },
-    [isControlled]
+  const [state, setInternalState] = React.useState<T>(
+    value !== undefined ? value : (defaultValue as T)
   )
 
-  return [value, setValue]
+  React.useEffect(() => {
+    if (value !== undefined) setInternalState(value)
+  }, [value])
+
+  const setState = React.useCallback(
+    (next: T, ...args: Rest) => {
+      setInternalState(next)
+      onChange?.(next, ...args)
+    },
+    [onChange]
+  )
+
+  return [state, setState] as const
 }

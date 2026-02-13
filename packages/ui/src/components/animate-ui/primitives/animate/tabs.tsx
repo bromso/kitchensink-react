@@ -1,15 +1,16 @@
 "use client"
 
-import { Slot, type WithAsChild } from "@repo/components/animate-ui/primitives/animate/slot"
+import * as React from "react"
+import { motion, type Transition, type HTMLMotionProps } from "motion/react"
+
 import {
   Highlight,
   HighlightItem,
   type HighlightItemProps,
   type HighlightProps,
-} from "@repo/components/animate-ui/primitives/effects/highlight"
-import { getStrictContext } from "@repo/lib/get-strict-context"
-import { type HTMLMotionProps, motion, type Transition } from "motion/react"
-import * as React from "react"
+} from "@repo/ui/components/animate-ui/primitives/effects/highlight"
+import { getStrictContext } from "@repo/ui/lib/get-strict-context"
+import { Slot, type WithAsChild } from "@repo/ui/components/animate-ui/primitives/animate/slot"
 
 type TabsContextType = {
   activeValue: string
@@ -268,7 +269,6 @@ function TabsContents({
       >
         {childrenArray.map((child, index) => (
           <div
-            // biome-ignore lint/suspicious/noArrayIndexKey: Index is stable for tab content order
             key={index}
             ref={(el) => {
               itemRefs.current[index] = el

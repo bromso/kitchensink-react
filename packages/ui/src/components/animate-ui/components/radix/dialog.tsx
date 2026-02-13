@@ -1,26 +1,28 @@
+
+import { XIcon } from "lucide-react"
+
 import {
-  DialogClose as DialogClosePrimitive,
-  type DialogCloseProps as DialogClosePrimitiveProps,
-  DialogContent as DialogContentPrimitive,
-  type DialogContentProps as DialogContentPrimitiveProps,
-  DialogDescription as DialogDescriptionPrimitive,
-  type DialogDescriptionProps as DialogDescriptionPrimitiveProps,
-  DialogFooter as DialogFooterPrimitive,
-  type DialogFooterProps as DialogFooterPrimitiveProps,
-  DialogHeader as DialogHeaderPrimitive,
-  type DialogHeaderProps as DialogHeaderPrimitiveProps,
-  DialogOverlay as DialogOverlayPrimitive,
-  type DialogOverlayProps as DialogOverlayPrimitiveProps,
-  DialogPortal as DialogPortalPrimitive,
   Dialog as DialogPrimitive,
-  type DialogProps as DialogPrimitiveProps,
+  DialogContent as DialogContentPrimitive,
+  DialogDescription as DialogDescriptionPrimitive,
+  DialogFooter as DialogFooterPrimitive,
+  DialogHeader as DialogHeaderPrimitive,
   DialogTitle as DialogTitlePrimitive,
-  type DialogTitleProps as DialogTitlePrimitiveProps,
   DialogTrigger as DialogTriggerPrimitive,
+  DialogPortal as DialogPortalPrimitive,
+  DialogOverlay as DialogOverlayPrimitive,
+  DialogClose as DialogClosePrimitive,
+  type DialogProps as DialogPrimitiveProps,
+  type DialogContentProps as DialogContentPrimitiveProps,
+  type DialogDescriptionProps as DialogDescriptionPrimitiveProps,
+  type DialogFooterProps as DialogFooterPrimitiveProps,
+  type DialogHeaderProps as DialogHeaderPrimitiveProps,
+  type DialogTitleProps as DialogTitlePrimitiveProps,
   type DialogTriggerProps as DialogTriggerPrimitiveProps,
+  type DialogOverlayProps as DialogOverlayPrimitiveProps,
+  type DialogCloseProps as DialogClosePrimitiveProps,
 } from "@repo/ui/components/animate-ui/primitives/radix/dialog"
 import { cn } from "@repo/ui/lib/utils"
-import { XIcon } from "lucide-react"
 
 type DialogProps = DialogPrimitiveProps
 
@@ -45,7 +47,7 @@ type DialogOverlayProps = DialogOverlayPrimitiveProps
 function DialogOverlay({ className, ...props }: DialogOverlayProps) {
   return (
     <DialogOverlayPrimitive
-      className={cn("fixed inset-0 z-50 bg-black/50 backdrop-blur-sm", className)}
+      className={cn("fixed inset-0 z-50 bg-black/50", className)}
       {...props}
     />
   )

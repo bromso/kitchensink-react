@@ -105,7 +105,10 @@ type ChartTooltipContentProps = {
   active?: boolean
   payload?: Payload<ValueType, NameType>[]
   label?: React.ReactNode
-  labelFormatter?: (label: React.ReactNode, payload: Payload<ValueType, NameType>[]) => React.ReactNode
+  labelFormatter?: (
+    label: React.ReactNode,
+    payload: Payload<ValueType, NameType>[]
+  ) => React.ReactNode
   formatter?: (
     value: ValueType,
     name: NameType,
@@ -187,7 +190,7 @@ function ChartTooltipContent({
             const key = `${nameKey || item.name || item.dataKey || "value"}`
             const itemConfig = getPayloadConfigFromPayload(config, item, key)
             const indicatorColor = color || item.payload.fill || item.color
-            const itemKey = typeof item.dataKey === "function" ? index : item.dataKey ?? index
+            const itemKey = typeof item.dataKey === "function" ? index : (item.dataKey ?? index)
 
             return (
               <div
