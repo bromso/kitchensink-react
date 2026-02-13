@@ -2,129 +2,137 @@
 
 import * as React from "react"
 import {
-  Switch as SwitchPrimitive,
-  type SwitchProps as SwitchPrimitiveProps,
+  TabGroup as TabGroupPrimitive,
+  TabList as TabListPrimitive,
+  Tab as TabPrimitive,
+  TabPanel as TabPanelPrimitive,
+  TabPanels as TabPanelsPrimitive,
+  type TabGroupProps as TabGroupPrimitiveProps,
+  type TabListProps as TabListPrimitiveProps,
+  type TabProps as TabPrimitiveProps,
+  type TabPanelProps as TabPanelPrimitiveProps,
+  type TabPanelsProps as TabPanelsPrimitiveProps,
 } from "@headlessui/react"
-import {
-  motion,
-  type TargetAndTransition,
-  type VariantLabels,
-  type HTMLMotionProps,
-  type LegacyAnimationControls,
-} from "motion/react"
+import { motion, type Transition, type HTMLMotionProps } from "motion/react"
 
 import { getStrictContext } from "@repo/ui/lib/get-strict-context"
 
-type SwitchContextType = {
-  isChecked: boolean
-  isPressed: boolean
+type TabsContextType = {
+  selectedIndex: number
 }
 
-const [SwitchProvider, useSwitch] = getStrictContext<SwitchContextType>("SwitchContext")
+const [TabsProvider, useTabsContext] = getStrictContext<TabsContextType>("TabsContext")
 
-type SwitchProps<TTag extends React.ElementType = typeof motion.button> =
-  SwitchPrimitiveProps<TTag> &
-    HTMLMotionProps<"button"> & {
-      as?: TTag
-    }
+type TabGroupProps<TTag extends React.ElementType = "div"> = TabGroupPrimitiveProps<TTag>
 
-function Switch<TTag extends React.ElementType = typeof motion.button>(props: SwitchProps<TTag>) {
-  const { as = motion.button, children, ...rest } = props
+function TabGroup<TTag extends React.ElementType = "div">(props: TabGroupProps<TTag>) {
+  const { onChange, defaultIndex = 0, ...rest } = props as TabGroupPrimitiveProps<"div">
+  const [selectedIndex, setSelectedIndex] = React.useState(defaultIndex)
 
-  const [isPressed, setIsPressed] = React.useState(false)
+  const handleChange = React.useCallback(
+    (index: number) => {
+      setSelectedIndex(index)
+      onChange?.(index)
+    },
+    [onChange]
+  )
 
   return (
-    <SwitchPrimitive
-      data-slot="switch"
-      whileTap="tap"
-      initial={false}
-      onTapStart={() => setIsPressed(true)}
-      onTapCancel={() => setIsPressed(false)}
-      onTap={() => setIsPressed(false)}
-      {...rest}
-      as={as}
-    >
-      {(bag) => (
-        <SwitchProvider value={{ isPressed, isChecked: bag.checked }}>
-          {typeof children === "function" ? children(bag) : children}
-        </SwitchProvider>
-      )}
-    </SwitchPrimitive>
+    <TabsProvider value={{ selectedIndex }}>
+      <TabGroupPrimitive
+        data-slot="tab-group"
+        defaultIndex={defaultIndex}
+        onChange={handleChange}
+        {...rest}
+      />
+    </TabsProvider>
   )
 }
 
-type SwitchThumbProps<TTag extends React.ElementType = typeof motion.div> =
+type TabListProps<TTag extends React.ElementType = "div"> = TabListPrimitiveProps<TTag>
+
+function TabList<TTag extends React.ElementType = "div">(props: TabListProps<TTag>) {
+  return <TabListPrimitive data-slot="tab-list" {...props} />
+}
+
+type TabProps<TTag extends React.ElementType = "button"> = TabPrimitiveProps<TTag> & {
+  index?: number
+}
+
+function Tab<TTag extends React.ElementType = "button">(props: TabProps<TTag>) {
+  const { index: _index, ...rest } = props
+  return <TabPrimitive data-slot="tab" {...rest} />
+}
+
+type TabPanelsProps<TTag extends React.ElementType = typeof motion.div> = TabPanelsPrimitiveProps<TTag> &
   HTMLMotionProps<"div"> & {
-    as?: TTag
-    pressedAnimation?: TargetAndTransition | VariantLabels | boolean | LegacyAnimationControls
+    transition?: Transition
   }
 
-function SwitchThumb<TTag extends React.ElementType = typeof motion.div>(
-  props: SwitchThumbProps<TTag>
-) {
-  const { isPressed, isChecked } = useSwitch()
+function TabPanels<TTag extends React.ElementType = typeof motion.div>({
+  transition = {
+    type: "spring",
+    stiffness: 300,
+    damping: 30,
+    bounce: 0,
+  },
+  ...props
+}: TabPanelsProps<TTag>) {
+  return <TabPanelsPrimitive data-slot="tab-panels" {...props} />
+}
 
-  const {
-    transition = { type: "spring", stiffness: 300, damping: 25 },
-    pressedAnimation,
-    as: Component = motion.div,
-    ...rest
-  } = props
+type TabPanelProps<TTag extends React.ElementType = typeof motion.div> = TabPanelPrimitiveProps<TTag> &
+  HTMLMotionProps<"div"> & {
+    index?: number
+  }
 
+function TabPanel<TTag extends React.ElementType = typeof motion.div>({
+  index: _index,
+  ...props
+}: TabPanelProps<TTag>) {
+  return <TabPanelPrimitive data-slot="tab-panel" {...props} />
+}
+
+type TabHighlightProps = React.ComponentProps<typeof motion.div> & {
+  transition?: Transition
+  children: React.ReactNode
+}
+
+function TabHighlight({
+  children,
+  transition = { type: "spring", stiffness: 200, damping: 25 },
+  ...props
+}: TabHighlightProps) {
   return (
-    <Component
-      data-slot="switch-thumb"
-      whileTap="tab"
-      layout
-      transition={transition}
-      animate={isPressed ? pressedAnimation : undefined}
-      {...(isChecked && { "data-checked": true })}
-      {...rest}
-    />
+    <div data-slot="tab-highlight" style={{ position: "relative" }} {...props}>
+      {children}
+    </div>
   )
 }
 
-type SwitchIconPosition = "left" | "right" | "thumb"
+type TabHighlightItemProps = React.ComponentProps<"div"> & {
+  index: number
+}
 
-type SwitchIconProps<TTag extends React.ElementType = typeof motion.div> =
-  HTMLMotionProps<"div"> & {
-    position: SwitchIconPosition
-    as?: TTag
-  }
-
-function SwitchIcon<TTag extends React.ElementType = typeof motion.div>(
-  props: SwitchIconProps<TTag>
-) {
-  const {
-    position,
-    transition = { type: "spring", bounce: 0 },
-    as: Component = motion.div,
-    ...rest
-  } = props
-  const { isChecked } = useSwitch()
-
-  const isAnimated = React.useMemo(() => {
-    if (position === "right") return !isChecked
-    if (position === "left") return isChecked
-    if (position === "thumb") return true
-    return false
-  }, [position, isChecked])
-
-  return (
-    <Component
-      data-slot={`switch-${position}-icon`}
-      animate={isAnimated ? { scale: 1, opacity: 1 } : { scale: 0, opacity: 0 }}
-      transition={transition}
-      {...rest}
-    />
-  )
+function TabHighlightItem({ index: _index, ...props }: TabHighlightItemProps) {
+  return <div data-slot="tab-highlight-item" {...props} />
 }
 
 export {
-  Switch,
-  SwitchThumb,
-  SwitchIcon,
-  type SwitchProps,
-  type SwitchThumbProps,
-  type SwitchIconProps,
+  TabGroup,
+  TabList,
+  Tab,
+  TabPanels,
+  TabPanel,
+  TabHighlight,
+  TabHighlightItem,
+  useTabsContext,
+  type TabGroupProps,
+  type TabListProps,
+  type TabProps,
+  type TabPanelsProps,
+  type TabPanelProps,
+  type TabHighlightProps,
+  type TabHighlightItemProps,
+  type TabsContextType,
 }
