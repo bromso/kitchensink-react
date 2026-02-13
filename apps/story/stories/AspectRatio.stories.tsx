@@ -3,7 +3,7 @@ import type { Meta, StoryObj } from "@storybook/react-vite"
 import { expect, within } from "storybook/test"
 
 const meta = {
-  title: "Components/Layout/AspectRatio",
+  title: "Layout/AspectRatio",
   component: AspectRatio,
   parameters: {
     layout: "centered",

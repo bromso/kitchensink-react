@@ -3,7 +3,7 @@ import type { Meta, StoryObj } from "@storybook/react-vite"
 import { expect, within } from "storybook/test"
 
 const meta = {
-  title: "Components/Layout/Resizable",
+  title: "Layout/Resizable",
   component: ResizablePanelGroup,
   parameters: {
     layout: "centered",

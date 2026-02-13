@@ -12,7 +12,7 @@ import type { Meta, StoryObj } from "@storybook/react-vite"
 import { expect, within } from "storybook/test"
 
 const meta = {
-  title: "Components/Layout/Empty",
+  title: "Layout/Empty",
   component: Empty,
   parameters: {
     layout: "centered",

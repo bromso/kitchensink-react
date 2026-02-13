@@ -10,7 +10,7 @@ import type { Meta, StoryObj } from "@storybook/react-vite"
 import { expect, userEvent, within } from "storybook/test"
 
 const meta = {
-  title: "Components/Layout/Carousel",
+  title: "Components/Surfaces/Carousel",
   component: Carousel,
   parameters: {
     layout: "centered",
