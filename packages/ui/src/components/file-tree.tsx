@@ -1,13 +1,12 @@
 "use client"
 
-import type React from "react"
-import { createContext, forwardRef, useCallback, useContext, useEffect, useState } from "react"
 import * as AccordionPrimitive from "@radix-ui/react-accordion"
-import { FileIcon, FolderIcon, FolderOpenIcon } from "lucide-react"
-
-import { cn } from "@repo/ui/lib/utils"
 import { Button } from "@repo/ui/components/button"
 import { ScrollArea } from "@repo/ui/components/scroll-area"
+import { cn } from "@repo/ui/lib/utils"
+import { FileIcon, FolderIcon, FolderOpenIcon } from "lucide-react"
+import type React from "react"
+import { createContext, forwardRef, useCallback, useContext, useEffect, useState } from "react"
 
 type TreeViewElement = {
   id: string
@@ -283,17 +282,20 @@ const CollapseButton = forwardRef<
 >(({ className, elements, expandAll = false, children, ...props }, ref) => {
   const { expandedItems, setExpandedItems } = useTree()
 
-  const expendAllTree = useCallback((elements: TreeViewElement[]) => {
-    const expandTree = (element: TreeViewElement) => {
-      const isSelectable = element.isSelectable ?? true
-      if (isSelectable && element.children && element.children.length > 0) {
-        setExpandedItems?.((prev) => [...(prev ?? []), element.id])
-        element.children.forEach(expandTree)
+  const expendAllTree = useCallback(
+    (elements: TreeViewElement[]) => {
+      const expandTree = (element: TreeViewElement) => {
+        const isSelectable = element.isSelectable ?? true
+        if (isSelectable && element.children && element.children.length > 0) {
+          setExpandedItems?.((prev) => [...(prev ?? []), element.id])
+          element.children.forEach(expandTree)
+        }
       }
-    }
 
-    elements.forEach(expandTree)
-  }, [setExpandedItems])
+      elements.forEach(expandTree)
+    },
+    [setExpandedItems]
+  )
 
   const closeAll = useCallback(() => {
     setExpandedItems?.([])

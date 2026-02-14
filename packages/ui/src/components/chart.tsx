@@ -2,8 +2,8 @@
 
 import { cn } from "@repo/ui/lib/utils"
 import * as React from "react"
-import type { NameType, Payload, ValueType } from "recharts/types/component/DefaultTooltipContent"
 import * as RechartsPrimitive from "recharts"
+import type { NameType, Payload, ValueType } from "recharts/types/component/DefaultTooltipContent"
 
 // Format: { THEME_NAME: CSS_SELECTOR }
 const THEMES = { light: "", dark: ".dark" } as const

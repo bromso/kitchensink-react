@@ -1,9 +1,8 @@
 "use client"
 
-import * as React from "react"
-import { cva, type VariantProps } from "class-variance-authority"
-
 import { cn } from "@repo/ui/lib/utils"
+import { cva, type VariantProps } from "class-variance-authority"
+import * as React from "react"
 
 /**
  * Spacing scale mapping (1-12) to Tailwind gap classes.

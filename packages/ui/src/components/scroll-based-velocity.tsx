@@ -1,6 +1,7 @@
 "use client"
 
-import React, { useContext, useEffect, useRef, useState } from "react"
+import { cn } from "@repo/ui/lib/utils"
+import type { MotionValue } from "motion/react"
 import {
   motion,
   useAnimationFrame,
@@ -10,9 +11,7 @@ import {
   useTransform,
   useVelocity,
 } from "motion/react"
-import type { MotionValue } from "motion/react"
-
-import { cn } from "@repo/ui/lib/utils"
+import React, { useContext, useEffect, useRef, useState } from "react"
 
 interface ScrollVelocityRowProps extends React.HTMLAttributes<HTMLDivElement> {
   children: React.ReactNode

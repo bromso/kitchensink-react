@@ -1,10 +1,9 @@
 "use client"
 
-import { useCallback, useEffect, useRef, useState } from "react"
-import { Moon, Sun } from "lucide-react"
-import { flushSync } from "react-dom"
-
 import { cn } from "@repo/ui/lib/utils"
+import { Moon, Sun } from "lucide-react"
+import { useCallback, useEffect, useRef, useState } from "react"
+import { flushSync } from "react-dom"
 
 interface AnimatedThemeTogglerProps extends React.ComponentPropsWithoutRef<"button"> {
   duration?: number

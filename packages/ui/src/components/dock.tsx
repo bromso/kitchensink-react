@@ -1,11 +1,10 @@
 "use client"
 
-import React, { type PropsWithChildren, useRef } from "react"
-import { cva, type VariantProps } from "class-variance-authority"
-import { motion, type MotionValue, useMotionValue, useSpring, useTransform } from "motion/react"
-import type { MotionProps } from "motion/react"
-
 import { cn } from "@repo/ui/lib/utils"
+import { cva, type VariantProps } from "class-variance-authority"
+import type { MotionProps } from "motion/react"
+import { type MotionValue, motion, useMotionValue, useSpring, useTransform } from "motion/react"
+import React, { type PropsWithChildren, useRef } from "react"
 
 export interface DockProps extends VariantProps<typeof dockVariants> {
   className?: string

@@ -1,10 +1,9 @@
 "use client"
 
+import { cn } from "@repo/ui/lib/utils"
+import { motion, useMotionTemplate, useMotionValue } from "motion/react"
 import type React from "react"
 import { useCallback, useEffect } from "react"
-import { motion, useMotionTemplate, useMotionValue } from "motion/react"
-
-import { cn } from "@repo/ui/lib/utils"
 
 interface MagicCardProps {
   children?: React.ReactNode

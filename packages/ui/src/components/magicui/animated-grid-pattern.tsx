@@ -1,5 +1,7 @@
 "use client"
 
+import { cn } from "@repo/ui/lib/utils"
+import { motion } from "motion/react"
 import {
   type ComponentPropsWithoutRef,
   useCallback,
@@ -8,9 +10,6 @@ import {
   useRef,
   useState,
 } from "react"
-import { motion } from "motion/react"
-
-import { cn } from "@repo/ui/lib/utils"
 
 export interface AnimatedGridPatternProps extends ComponentPropsWithoutRef<"svg"> {
   width?: number

@@ -1,14 +1,14 @@
 "use client"
 
-import { useRef } from "react"
 import {
   AnimatePresence,
-  motion,
   type MotionProps,
-  useInView,
+  motion,
   type UseInViewOptions,
+  useInView,
   type Variants,
 } from "motion/react"
+import { useRef } from "react"
 
 type MarginType = UseInViewOptions["margin"]
 

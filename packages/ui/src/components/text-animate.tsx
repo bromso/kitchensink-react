@@ -1,9 +1,8 @@
 "use client"
 
-import { type ElementType, memo } from "react"
-import { AnimatePresence, motion, type MotionProps, type Variants } from "motion/react"
-
 import { cn } from "@repo/ui/lib/utils"
+import { AnimatePresence, type MotionProps, motion, type Variants } from "motion/react"
+import { type ElementType, memo } from "react"
 
 type AnimationType = "text" | "word" | "character" | "line"
 type AnimationVariant =

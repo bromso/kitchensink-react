@@ -1,9 +1,8 @@
 "use client"
 
-import { Children, createContext, useContext, useEffect, useMemo, useRef, useState } from "react"
-import { motion, type MotionProps, useInView } from "motion/react"
-
 import { cn } from "@repo/ui/lib/utils"
+import { type MotionProps, motion, useInView } from "motion/react"
+import { Children, createContext, useContext, useEffect, useMemo, useRef, useState } from "react"
 
 interface SequenceContextValue {
   completeItem: (index: number) => void
@@ -132,13 +131,14 @@ export const TypingAnimation = ({
     const startTimeout = setTimeout(() => setStarted(true), delay)
     return () => clearTimeout(startTimeout)
   }, [
-    delay, 
-    startOnView, 
-    isInView, 
-    started, 
-    sequence?.activeIndex, 
-    sequence?.sequenceStarted, 
-    itemIndex, sequence
+    delay,
+    startOnView,
+    isInView,
+    started,
+    sequence?.activeIndex,
+    sequence?.sequenceStarted,
+    itemIndex,
+    sequence,
   ])
 
   useEffect(() => {

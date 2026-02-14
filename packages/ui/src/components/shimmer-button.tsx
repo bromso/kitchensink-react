@@ -1,6 +1,5 @@
-import React, { type ComponentPropsWithoutRef, type CSSProperties } from "react"
-
 import { cn } from "@repo/ui/lib/utils"
+import React, { type ComponentPropsWithoutRef, type CSSProperties } from "react"
 
 export interface ShimmerButtonProps extends ComponentPropsWithoutRef<"button"> {
   shimmerColor?: string

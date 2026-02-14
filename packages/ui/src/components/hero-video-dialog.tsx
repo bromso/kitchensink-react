@@ -1,10 +1,9 @@
 "use client"
 
-import { useState } from "react"
+import { cn } from "@repo/ui/lib/utils"
 import { Play, XIcon } from "lucide-react"
 import { AnimatePresence, motion } from "motion/react"
-
-import { cn } from "@repo/ui/lib/utils"
+import { useState } from "react"
 
 type AnimationStyle =
   | "from-bottom"

@@ -1,11 +1,10 @@
 "use client"
 
-import { useEffect, useMemo, useState } from "react"
+import { cn } from "@repo/ui/lib/utils"
 import { transformerNotationDiff, transformerNotationFocus } from "@shikijs/transformers"
 import { FileIcon } from "lucide-react"
 import { useTheme } from "next-themes"
-
-import { cn } from "@repo/ui/lib/utils"
+import { useEffect, useMemo, useState } from "react"
 
 interface CodeComparisonProps {
   beforeCode: string

@@ -1,9 +1,8 @@
 "use client"
 
-import { useEffect, useRef, useState } from "react"
-import { AnimatePresence, motion, type MotionProps } from "motion/react"
-
 import { cn } from "@repo/ui/lib/utils"
+import { AnimatePresence, type MotionProps, motion } from "motion/react"
+import { useEffect, useRef, useState } from "react"
 
 type CharacterSet = string[] | readonly string[]
 

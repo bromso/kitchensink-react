@@ -1,9 +1,8 @@
 "use client"
 
-import { type ComponentPropsWithoutRef, type FC, type ReactNode, useRef } from "react"
-import { motion, type MotionValue, useScroll, useTransform } from "motion/react"
-
 import { cn } from "@repo/ui/lib/utils"
+import { type MotionValue, motion, useScroll, useTransform } from "motion/react"
+import { type ComponentPropsWithoutRef, type FC, type ReactNode, useRef } from "react"
 
 export interface TextRevealProps extends ComponentPropsWithoutRef<"div"> {
   children: string

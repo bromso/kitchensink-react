@@ -1,9 +1,8 @@
 "use client"
 
-import type { CSSProperties } from "react"
-import { motion } from "motion/react"
-
 import { cn } from "@repo/ui/lib/utils"
+import { motion } from "motion/react"
+import type { CSSProperties } from "react"
 
 type ComicTextProps = {
   children: string

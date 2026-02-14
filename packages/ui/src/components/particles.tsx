@@ -1,9 +1,8 @@
 "use client"
 
+import { cn } from "@repo/ui/lib/utils"
 import type React from "react"
 import { type ComponentPropsWithoutRef, useEffect, useRef, useState } from "react"
-
-import { cn } from "@repo/ui/lib/utils"
 
 interface MousePosition {
   x: number
