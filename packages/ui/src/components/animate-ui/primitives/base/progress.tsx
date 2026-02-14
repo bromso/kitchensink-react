@@ -1,14 +1,13 @@
 "use client"
 
-import type * as React from "react"
 import { Progress as ProgressPrimitives } from "@base-ui-components/react/progress"
-import { motion } from "motion/react"
-
 import {
   CountingNumber,
   type CountingNumberProps,
 } from "@repo/ui/components/animate-ui/primitives/texts/counting-number"
 import { getStrictContext } from "@repo/ui/lib/get-strict-context"
+import { motion } from "motion/react"
+import type * as React from "react"
 
 type ProgressContextType = {
   value: number

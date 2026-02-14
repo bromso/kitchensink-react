@@ -1,26 +1,25 @@
-import type * as React from "react"
-import type { motion } from "motion/react"
-
 import {
-  Dialog as DialogPrimitive,
-  DialogPanel as DialogPanelPrimitive,
-  DialogDescription as DialogDescriptionPrimitive,
-  DialogFooter as DialogFooterPrimitive,
-  DialogHeader as DialogHeaderPrimitive,
-  DialogTitle as DialogTitlePrimitive,
   DialogBackdrop as DialogBackdropPrimitive,
-  DialogClose as DialogClosePrimitive,
-  type DialogProps as DialogPrimitiveProps,
-  type DialogPanelProps as DialogPanelPrimitiveProps,
-  type DialogDescriptionProps as DialogDescriptionPrimitiveProps,
-  type DialogFooterProps as DialogFooterPrimitiveProps,
-  type DialogHeaderProps as DialogHeaderPrimitiveProps,
-  type DialogTitleProps as DialogTitlePrimitiveProps,
   type DialogBackdropProps as DialogBackdropPrimitiveProps,
+  DialogClose as DialogClosePrimitive,
   type DialogCloseProps as DialogClosePrimitiveProps,
+  DialogDescription as DialogDescriptionPrimitive,
+  type DialogDescriptionProps as DialogDescriptionPrimitiveProps,
+  DialogFooter as DialogFooterPrimitive,
+  type DialogFooterProps as DialogFooterPrimitiveProps,
+  DialogHeader as DialogHeaderPrimitive,
+  type DialogHeaderProps as DialogHeaderPrimitiveProps,
+  DialogPanel as DialogPanelPrimitive,
+  type DialogPanelProps as DialogPanelPrimitiveProps,
+  Dialog as DialogPrimitive,
+  type DialogProps as DialogPrimitiveProps,
+  DialogTitle as DialogTitlePrimitive,
+  type DialogTitleProps as DialogTitlePrimitiveProps,
 } from "@repo/ui/components/animate-ui/primitives/headless/dialog"
 import { cn } from "@repo/ui/lib/utils"
 import { XIcon } from "lucide-react"
+import type { motion } from "motion/react"
+import type * as React from "react"
 
 type DialogProps<TTag extends React.ElementType = "div"> = DialogPrimitiveProps<TTag>
 

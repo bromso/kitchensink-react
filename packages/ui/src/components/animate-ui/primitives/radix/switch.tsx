@@ -1,17 +1,16 @@
 "use client"
 
-import * as React from "react"
-import { Switch as SwitchPrimitives } from "radix-ui"
+import { useControlledState } from "@repo/ui/hooks/use-controlled-state"
+import { getStrictContext } from "@repo/ui/lib/get-strict-context"
 import {
+  type HTMLMotionProps,
+  type LegacyAnimationControls,
   motion,
   type TargetAndTransition,
   type VariantLabels,
-  type HTMLMotionProps,
-  type LegacyAnimationControls,
 } from "motion/react"
-
-import { getStrictContext } from "@repo/ui/lib/get-strict-context"
-import { useControlledState } from "@repo/ui/hooks/use-controlled-state"
+import { Switch as SwitchPrimitives } from "radix-ui"
+import * as React from "react"
 
 type SwitchContextType = {
   isChecked: boolean

@@ -1,9 +1,8 @@
 "use client"
 
-import * as React from "react"
-import { motion, useMotionValue, useSpring, type SpringOptions } from "motion/react"
-
 import { cn } from "@repo/ui/lib/utils"
+import { motion, type SpringOptions, useMotionValue, useSpring } from "motion/react"
+import * as React from "react"
 
 type BubbleColors = {
   first: string

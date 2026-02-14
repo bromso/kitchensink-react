@@ -1,8 +1,6 @@
 "use client"
 
-import * as React from "react"
-import { motion, type Transition, type HTMLMotionProps } from "motion/react"
-
+import { Slot, type WithAsChild } from "@repo/ui/components/animate-ui/primitives/animate/slot"
 import {
   Highlight,
   HighlightItem,
@@ -10,7 +8,8 @@ import {
   type HighlightProps,
 } from "@repo/ui/components/animate-ui/primitives/effects/highlight"
 import { getStrictContext } from "@repo/ui/lib/get-strict-context"
-import { Slot, type WithAsChild } from "@repo/ui/components/animate-ui/primitives/animate/slot"
+import { type HTMLMotionProps, motion, type Transition } from "motion/react"
+import * as React from "react"
 
 type TabsContextType = {
   activeValue: string

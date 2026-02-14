@@ -1,14 +1,12 @@
-
-
 import {
-  Progress as ProgressPrimitive,
-  ProgressTrack as ProgressTrackPrimitive,
   ProgressIndicator as ProgressIndicatorPrimitive,
   ProgressLabel as ProgressLabelPrimitive,
-  ProgressValue as ProgressValuePrimitive,
-  type ProgressProps as ProgressPrimitiveProps,
-  type ProgressTrackProps as ProgressTrackPrimitiveProps,
   type ProgressLabelProps as ProgressLabelPrimitiveProps,
+  Progress as ProgressPrimitive,
+  type ProgressProps as ProgressPrimitiveProps,
+  ProgressTrack as ProgressTrackPrimitive,
+  type ProgressTrackProps as ProgressTrackPrimitiveProps,
+  ProgressValue as ProgressValuePrimitive,
   type ProgressValueProps as ProgressValuePrimitiveProps,
 } from "@repo/ui/components/animate-ui/primitives/base/progress"
 import { cn } from "@repo/ui/lib/utils"

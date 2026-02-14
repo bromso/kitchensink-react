@@ -1,17 +1,16 @@
 "use client"
 
-import type * as React from "react"
 import {
-  Disclosure as DisclosurePrimitive,
   DisclosureButton as DisclosureButtonPrimitive,
-  DisclosurePanel as DisclosurePanelPrimitive,
-  type DisclosureProps as DisclosurePrimitiveProps,
   type DisclosureButtonProps as DisclosureButtonPrimitiveProps,
+  DisclosurePanel as DisclosurePanelPrimitive,
   type DisclosurePanelProps as DisclosurePanelPrimitiveProps,
+  Disclosure as DisclosurePrimitive,
+  type DisclosureProps as DisclosurePrimitiveProps,
 } from "@headlessui/react"
-import { motion, AnimatePresence, type HTMLMotionProps } from "motion/react"
-
 import { getStrictContext } from "@repo/ui/lib/get-strict-context"
+import { AnimatePresence, type HTMLMotionProps, motion } from "motion/react"
+import type * as React from "react"
 
 type DisclosureContextType = {
   isOpen: boolean

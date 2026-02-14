@@ -1,11 +1,10 @@
 "use client"
 
-import * as React from "react"
-import { Accordion as AccordionPrimitive } from "radix-ui"
-import { motion, AnimatePresence, type HTMLMotionProps } from "motion/react"
-
 import { useControlledState } from "@repo/ui/hooks/use-controlled-state"
 import { getStrictContext } from "@repo/ui/lib/get-strict-context"
+import { AnimatePresence, type HTMLMotionProps, motion } from "motion/react"
+import { Accordion as AccordionPrimitive } from "radix-ui"
+import * as React from "react"
 
 type AccordionContextType = {
   value: string | string[] | undefined

@@ -1,17 +1,16 @@
-
-import type { VariantProps } from "class-variance-authority"
+import { buttonVariants } from "@repo/ui/components/animate-ui/components/buttons/button"
 
 import {
-  FlipButton as FlipButtonPrimitive,
-  FlipButtonFront as FlipButtonFrontPrimitive,
   FlipButtonBack as FlipButtonBackPrimitive,
-  type FlipButtonProps as FlipButtonPrimitiveProps,
-  type FlipButtonFrontProps as FlipButtonFrontPrimitiveProps,
   type FlipButtonBackProps as FlipButtonBackPrimitiveProps,
+  FlipButtonFront as FlipButtonFrontPrimitive,
+  type FlipButtonFrontProps as FlipButtonFrontPrimitiveProps,
+  FlipButton as FlipButtonPrimitive,
+  type FlipButtonProps as FlipButtonPrimitiveProps,
 } from "@repo/ui/components/animate-ui/primitives/buttons/flip"
 import { getStrictContext } from "@repo/ui/lib/get-strict-context"
-import { buttonVariants } from "@repo/ui/components/animate-ui/components/buttons/button"
 import { cn } from "@repo/ui/lib/utils"
+import type { VariantProps } from "class-variance-authority"
 
 type FlipButtonContextType = VariantProps<typeof buttonVariants>
 

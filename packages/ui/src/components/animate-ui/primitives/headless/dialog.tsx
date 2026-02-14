@@ -1,20 +1,20 @@
 "use client"
 
-import type * as React from "react"
 import {
-  Dialog as DialogPrimitive,
-  DialogBackdrop as DialogBackdropPrimitive,
-  DialogPanel as DialogPanelPrimitive,
-  DialogTitle as DialogTitlePrimitive,
-  Description as DialogDescriptionPrimitive,
-  type DialogProps as DialogPrimitiveProps,
-  type DialogBackdropProps as DialogBackdropPrimitiveProps,
-  type DialogPanelProps as DialogPanelPrimitiveProps,
-  type DialogTitleProps as DialogTitlePrimitiveProps,
   CloseButton,
   type CloseButtonProps,
+  DialogBackdrop as DialogBackdropPrimitive,
+  type DialogBackdropProps as DialogBackdropPrimitiveProps,
+  Description as DialogDescriptionPrimitive,
+  DialogPanel as DialogPanelPrimitive,
+  type DialogPanelProps as DialogPanelPrimitiveProps,
+  Dialog as DialogPrimitive,
+  type DialogProps as DialogPrimitiveProps,
+  DialogTitle as DialogTitlePrimitive,
+  type DialogTitleProps as DialogTitlePrimitiveProps,
 } from "@headlessui/react"
-import { motion, AnimatePresence, type Transition, type HTMLMotionProps } from "motion/react"
+import { AnimatePresence, type HTMLMotionProps, motion, type Transition } from "motion/react"
+import type * as React from "react"
 
 type DialogProps<TTag extends React.ElementType = "div"> = Omit<
   DialogPrimitiveProps<TTag>,

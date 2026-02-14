@@ -1,14 +1,12 @@
-
-import { CircleIcon } from "lucide-react"
-
 import {
   RadioGroup as RadioGroupPrimitive,
-  Radio as RadioPrimitive,
-  RadioIndicator as RadioIndicatorPrimitive,
   type RadioGroupProps as RadioGroupPrimitiveProps,
+  RadioIndicator as RadioIndicatorPrimitive,
+  Radio as RadioPrimitive,
   type RadioProps as RadioPrimitiveProps,
 } from "@repo/ui/components/animate-ui/primitives/base/radio"
 import { cn } from "@repo/ui/lib/utils"
+import { CircleIcon } from "lucide-react"
 
 type RadioGroupProps = RadioGroupPrimitiveProps
 

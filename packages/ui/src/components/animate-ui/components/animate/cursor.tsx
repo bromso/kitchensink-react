@@ -1,14 +1,12 @@
-
-
 import {
-  CursorProvider as CursorProviderPrimitive,
-  Cursor as CursorPrimitive,
-  CursorFollow as CursorFollowPrimitive,
   CursorContainer as CursorContainerPrimitive,
-  type CursorProviderProps as CursorProviderPropsPrimitive,
   type CursorContainerProps as CursorContainerPropsPrimitive,
-  type CursorProps as CursorPropsPrimitive,
+  CursorFollow as CursorFollowPrimitive,
   type CursorFollowProps as CursorFollowPropsPrimitive,
+  Cursor as CursorPrimitive,
+  type CursorProps as CursorPropsPrimitive,
+  CursorProvider as CursorProviderPrimitive,
+  type CursorProviderProps as CursorProviderPropsPrimitive,
 } from "@repo/ui/components/animate-ui/primitives/animate/cursor"
 import { cn } from "@repo/ui/lib/utils"
 

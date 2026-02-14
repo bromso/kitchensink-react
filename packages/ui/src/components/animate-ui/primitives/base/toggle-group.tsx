@@ -1,18 +1,17 @@
 "use client"
 
-import * as React from "react"
 import { Toggle as TogglePrimitive } from "@base-ui-components/react/toggle"
 import { ToggleGroup as ToggleGroupPrimitive } from "@base-ui-components/react/toggle-group"
-import { AnimatePresence, motion, type HTMLMotionProps } from "motion/react"
-
 import {
   Highlight,
   HighlightItem,
   type HighlightItemProps,
   type HighlightProps,
 } from "@repo/ui/components/animate-ui/primitives/effects/highlight"
-import { getStrictContext } from "@repo/ui/lib/get-strict-context"
 import { useControlledState } from "@repo/ui/hooks/use-controlled-state"
+import { getStrictContext } from "@repo/ui/lib/get-strict-context"
+import { AnimatePresence, type HTMLMotionProps, motion } from "motion/react"
+import * as React from "react"
 
 type ToggleGroupContextType = {
   // eslint-disable-next-line @typescript-eslint/no-explicit-any

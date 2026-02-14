@@ -1,21 +1,20 @@
-import type * as React from "react"
-import type { motion } from "motion/react"
-
 import {
   TabGroup as TabGroupPrimitive,
-  TabList as TabListPrimitive,
-  Tab as TabPrimitive,
-  TabPanel as TabPanelPrimitive,
-  TabPanels as TabPanelsPrimitive,
-  TabHighlight as TabHighlightPrimitive,
-  TabHighlightItem as TabHighlightItemPrimitive,
   type TabGroupProps as TabGroupPrimitiveProps,
+  TabHighlightItem as TabHighlightItemPrimitive,
+  TabHighlight as TabHighlightPrimitive,
+  TabList as TabListPrimitive,
   type TabListProps as TabListPrimitiveProps,
-  type TabProps as TabPrimitiveProps,
+  TabPanel as TabPanelPrimitive,
   type TabPanelProps as TabPanelPrimitiveProps,
+  TabPanels as TabPanelsPrimitive,
   type TabPanelsProps as TabPanelsPrimitiveProps,
+  Tab as TabPrimitive,
+  type TabProps as TabPrimitiveProps,
 } from "@repo/ui/components/animate-ui/primitives/headless/tabs"
 import { cn } from "@repo/ui/lib/utils"
+import type { motion } from "motion/react"
+import type * as React from "react"
 
 type TabGroupProps<TTag extends React.ElementType = "div"> = TabGroupPrimitiveProps<TTag>
 

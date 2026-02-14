@@ -1,16 +1,15 @@
 "use client"
 
-import * as React from "react"
-import { motion, LayoutGroup } from "motion/react"
-
-import { Avatar, AvatarFallback, AvatarImage } from "@repo/ui/components/avatar"
 import {
-  TooltipProvider,
   Tooltip,
   TooltipContent,
+  TooltipProvider,
   TooltipTrigger,
 } from "@repo/ui/components/animate-ui/components/animate/tooltip"
+import { Avatar, AvatarFallback, AvatarImage } from "@repo/ui/components/avatar"
 import { cn } from "@repo/ui/lib/utils"
+import { LayoutGroup, motion } from "motion/react"
+import * as React from "react"
 
 const USERS = [
   {

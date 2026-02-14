@@ -1,8 +1,5 @@
 "use client"
 
-import type * as React from "react"
-import { AnimatePresence, motion, type HTMLMotionProps } from "motion/react"
-
 import {
   Highlight,
   HighlightItem,
@@ -11,18 +8,20 @@ import {
 } from "@repo/ui/components/animate-ui/primitives/effects/highlight"
 import {
   Accordion,
-  AccordionItem,
-  AccordionHeader,
-  AccordionTrigger,
   AccordionContent,
-  type AccordionProps,
-  type AccordionItemProps,
-  type AccordionHeaderProps,
-  type AccordionTriggerProps,
   type AccordionContentProps,
+  AccordionHeader,
+  type AccordionHeaderProps,
+  AccordionItem,
+  type AccordionItemProps,
+  type AccordionProps,
+  AccordionTrigger,
+  type AccordionTriggerProps,
 } from "@repo/ui/components/animate-ui/primitives/radix/accordion"
-import { getStrictContext } from "@repo/ui/lib/get-strict-context"
 import { useControlledState } from "@repo/ui/hooks/use-controlled-state"
+import { getStrictContext } from "@repo/ui/lib/get-strict-context"
+import { AnimatePresence, type HTMLMotionProps, motion } from "motion/react"
+import type * as React from "react"
 
 type FilesContextType = {
   open: string[]

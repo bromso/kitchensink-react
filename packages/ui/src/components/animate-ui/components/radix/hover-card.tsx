@@ -1,13 +1,11 @@
-
-
 import {
-  HoverCard as HoverCardPrimitive,
-  HoverCardTrigger as HoverCardTriggerPrimitive,
-  HoverCardPortal as HoverCardPortalPrimitive,
   HoverCardContent as HoverCardContentPrimitive,
-  type HoverCardProps as HoverCardPrimitiveProps,
-  type HoverCardTriggerProps as HoverCardTriggerPrimitiveProps,
   type HoverCardContentProps as HoverCardContentPrimitiveProps,
+  HoverCardPortal as HoverCardPortalPrimitive,
+  HoverCard as HoverCardPrimitive,
+  type HoverCardProps as HoverCardPrimitiveProps,
+  HoverCardTrigger as HoverCardTriggerPrimitive,
+  type HoverCardTriggerProps as HoverCardTriggerPrimitiveProps,
 } from "@repo/ui/components/animate-ui/primitives/radix/hover-card"
 import { cn } from "@repo/ui/lib/utils"
 

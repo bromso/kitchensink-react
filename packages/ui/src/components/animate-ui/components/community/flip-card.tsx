@@ -2,9 +2,9 @@
 "use client"
 
 import { Button } from "@repo/ui/components/button"
+import { Github, Linkedin, Twitter } from "lucide-react"
 import { easeOut, motion } from "motion/react"
 import * as React from "react"
-import { Github, Linkedin, Twitter } from "lucide-react"
 
 export interface FlipCardData {
   name: string

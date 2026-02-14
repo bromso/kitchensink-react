@@ -1,16 +1,14 @@
-
-
 import {
-  TooltipProvider as TooltipProviderPrimitive,
-  Tooltip as TooltipPrimitive,
-  TooltipTrigger as TooltipTriggerPrimitive,
-  TooltipContent as TooltipContentPrimitive,
   TooltipArrow as TooltipArrowPrimitive,
-  TooltipPortal as TooltipPortalPrimitive,
-  type TooltipProviderProps as TooltipProviderPrimitiveProps,
-  type TooltipProps as TooltipPrimitiveProps,
-  type TooltipTriggerProps as TooltipTriggerPrimitiveProps,
+  TooltipContent as TooltipContentPrimitive,
   type TooltipContentProps as TooltipContentPrimitiveProps,
+  TooltipPortal as TooltipPortalPrimitive,
+  Tooltip as TooltipPrimitive,
+  type TooltipProps as TooltipPrimitiveProps,
+  TooltipProvider as TooltipProviderPrimitive,
+  type TooltipProviderProps as TooltipProviderPrimitiveProps,
+  TooltipTrigger as TooltipTriggerPrimitive,
+  type TooltipTriggerProps as TooltipTriggerPrimitiveProps,
 } from "@repo/ui/components/animate-ui/primitives/radix/tooltip"
 import { cn } from "@repo/ui/lib/utils"
 

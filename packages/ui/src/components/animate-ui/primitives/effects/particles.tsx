@@ -1,11 +1,10 @@
 "use client"
 
-import type * as React from "react"
-import { motion, AnimatePresence, type HTMLMotionProps } from "motion/react"
-
 import { Slot, type WithAsChild } from "@repo/ui/components/animate-ui/primitives/animate/slot"
-import { useIsInView, type UseIsInViewOptions } from "@repo/ui/hooks/use-is-in-view"
+import { type UseIsInViewOptions, useIsInView } from "@repo/ui/hooks/use-is-in-view"
 import { getStrictContext } from "@repo/ui/lib/get-strict-context"
+import { AnimatePresence, type HTMLMotionProps, motion } from "motion/react"
+import type * as React from "react"
 
 type Side = "top" | "bottom" | "left" | "right"
 type Align = "start" | "center" | "end"

@@ -1,8 +1,8 @@
 "use client"
 
+import { AnimatePresence, type HTMLMotionProps, motion, type SVGMotionProps } from "motion/react"
 import * as React from "react"
 import { createPortal } from "react-dom"
-import { motion, AnimatePresence, type HTMLMotionProps, type SVGMotionProps } from "motion/react"
 
 type ClickVariant = "ripple" | "ring" | "crosshair" | "burst" | "particles"
 

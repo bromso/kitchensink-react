@@ -1,7 +1,7 @@
 "use client"
 
-import type * as React from "react"
 import { motion, type Transition } from "motion/react"
+import type * as React from "react"
 
 type GradientTextProps = Omit<React.ComponentProps<"span">, "children"> & {
   text: string

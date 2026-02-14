@@ -1,18 +1,17 @@
-import type * as React from "react"
-import * as motion from "motion/react-client"
-
 import {
-  TooltipProvider as TooltipProviderPrimitive,
-  Tooltip as TooltipPrimitive,
-  TooltipTrigger as TooltipTriggerPrimitive,
-  TooltipContent as TooltipContentPrimitive,
   TooltipArrow as TooltipArrowPrimitive,
-  type TooltipProviderProps as TooltipProviderPrimitiveProps,
-  type TooltipProps as TooltipPrimitiveProps,
-  type TooltipTriggerProps as TooltipTriggerPrimitiveProps,
+  TooltipContent as TooltipContentPrimitive,
   type TooltipContentProps as TooltipContentPrimitiveProps,
+  Tooltip as TooltipPrimitive,
+  type TooltipProps as TooltipPrimitiveProps,
+  TooltipProvider as TooltipProviderPrimitive,
+  type TooltipProviderProps as TooltipProviderPrimitiveProps,
+  TooltipTrigger as TooltipTriggerPrimitive,
+  type TooltipTriggerProps as TooltipTriggerPrimitiveProps,
 } from "@repo/ui/components/animate-ui/primitives/animate/tooltip"
 import { cn } from "@repo/ui/lib/utils"
+import * as motion from "motion/react-client"
+import type * as React from "react"
 
 type TooltipProviderProps = TooltipProviderPrimitiveProps
 

@@ -1,13 +1,12 @@
-import type * as React from "react"
-import type { motion } from "motion/react"
-
 import {
-  Checkbox as CheckboxPrimitive,
   CheckboxIndicator as CheckboxIndicatorPrimitive,
+  Checkbox as CheckboxPrimitive,
   type CheckboxProps as CheckboxPrimitiveProps,
 } from "@repo/ui/components/animate-ui/primitives/headless/checkbox"
 import { cn } from "@repo/ui/lib/utils"
 import { cva, type VariantProps } from "class-variance-authority"
+import type { motion } from "motion/react"
+import type * as React from "react"
 
 const checkboxVariants = cva(
   "peer shrink-0 flex items-center justify-center outline-none focus-visible:ring-[3px] focus-visible:ring-ring/50 aria-invalid:ring-destructive/20 dark:aria-invalid:ring-destructive/40 disabled:cursor-not-allowed disabled:opacity-50 transition-colors duration-500 focus-visible:ring-offset-2 [&[data-checked],&[data-indeterminate]]:bg-primary [&[data-checked],&[data-indeterminate]]:text-primary-foreground",

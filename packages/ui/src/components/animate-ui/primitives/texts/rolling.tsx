@@ -1,9 +1,8 @@
 "use client"
 
-import * as React from "react"
+import { type UseIsInViewOptions, useIsInView } from "@repo/ui/hooks/use-is-in-view"
 import { motion, type Transition } from "motion/react"
-
-import { useIsInView, type UseIsInViewOptions } from "@repo/ui/hooks/use-is-in-view"
+import * as React from "react"
 
 const formatCharacter = (char: string) => (char === " " ? "\u00A0" : char)
 

@@ -1,10 +1,9 @@
 "use client"
 
-import * as React from "react"
-import { motion, AnimatePresence, type HTMLMotionProps } from "motion/react"
-
-import { useIsInView, type UseIsInViewOptions } from "@repo/ui/hooks/use-is-in-view"
+import { type UseIsInViewOptions, useIsInView } from "@repo/ui/hooks/use-is-in-view"
 import { getStrictContext } from "@repo/ui/lib/get-strict-context"
+import { AnimatePresence, type HTMLMotionProps, motion } from "motion/react"
+import * as React from "react"
 
 type RotatingTextContextType = {
   currentText: string

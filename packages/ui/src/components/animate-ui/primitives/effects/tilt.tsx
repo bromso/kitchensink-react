@@ -1,17 +1,16 @@
 "use client"
 
-import * as React from "react"
-import {
-  motion,
-  useMotionValue,
-  useSpring,
-  type MotionValue,
-  type SpringOptions,
-  type HTMLMotionProps,
-} from "motion/react"
-
 import { Slot, type WithAsChild } from "@repo/ui/components/animate-ui/primitives/animate/slot"
 import { getStrictContext } from "@repo/ui/lib/get-strict-context"
+import {
+  type HTMLMotionProps,
+  type MotionValue,
+  motion,
+  type SpringOptions,
+  useMotionValue,
+  useSpring,
+} from "motion/react"
+import * as React from "react"
 
 type TiltContextType = {
   sRX: MotionValue<number>

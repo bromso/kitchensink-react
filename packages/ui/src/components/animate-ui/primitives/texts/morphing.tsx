@@ -1,9 +1,8 @@
 "use client"
 
+import { type UseIsInViewOptions, useIsInView } from "@repo/ui/hooks/use-is-in-view"
+import { AnimatePresence, type HTMLMotionProps, motion } from "motion/react"
 import * as React from "react"
-import { AnimatePresence, motion, type HTMLMotionProps } from "motion/react"
-
-import { useIsInView, type UseIsInViewOptions } from "@repo/ui/hooks/use-is-in-view"
 
 function segmentGraphemes(text: string): string[] {
   if (typeof Intl.Segmenter === "function") {

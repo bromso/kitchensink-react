@@ -1,19 +1,18 @@
 "use client"
 
-import type * as React from "react"
 import { PreviewCard as PreviewCardPrimitive } from "@base-ui-components/react/preview-card"
+import { useControlledState } from "@repo/ui/hooks/use-controlled-state"
+import { getStrictContext } from "@repo/ui/lib/get-strict-context"
 import {
   AnimatePresence,
-  motion,
-  useMotionValue,
-  useSpring,
   type HTMLMotionProps,
   type MotionValue,
+  motion,
   type SpringOptions,
+  useMotionValue,
+  useSpring,
 } from "motion/react"
-
-import { getStrictContext } from "@repo/ui/lib/get-strict-context"
-import { useControlledState } from "@repo/ui/hooks/use-controlled-state"
+import type * as React from "react"
 
 type PreviewCardContextType = {
   isOpen: boolean

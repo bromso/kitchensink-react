@@ -1,19 +1,18 @@
 "use client"
 
-import * as React from "react"
 import {
   Switch as SwitchPrimitive,
   type SwitchProps as SwitchPrimitiveProps,
 } from "@headlessui/react"
+import { getStrictContext } from "@repo/ui/lib/get-strict-context"
 import {
+  type HTMLMotionProps,
+  type LegacyAnimationControls,
   motion,
   type TargetAndTransition,
   type VariantLabels,
-  type HTMLMotionProps,
-  type LegacyAnimationControls,
 } from "motion/react"
-
-import { getStrictContext } from "@repo/ui/lib/get-strict-context"
+import * as React from "react"
 
 type SwitchContextType = {
   isChecked: boolean

@@ -1,21 +1,20 @@
 "use client"
 
-import * as React from "react"
-import { motion, type HTMLMotionProps } from "motion/react"
-
-import { useIsInView, type UseIsInViewOptions } from "@repo/ui/hooks/use-is-in-view"
-import { getStrictContext } from "@repo/ui/lib/get-strict-context"
 import { Slot, type WithAsChild } from "@repo/ui/components/animate-ui/primitives/animate/slot"
-import {
-  SlidingNumber,
-  type SlidingNumberProps,
-} from "@repo/ui/components/animate-ui/primitives/texts/sliding-number"
 import {
   Particles,
   ParticlesEffect,
   type ParticlesEffectProps,
 } from "@repo/ui/components/animate-ui/primitives/effects/particles"
+import {
+  SlidingNumber,
+  type SlidingNumberProps,
+} from "@repo/ui/components/animate-ui/primitives/texts/sliding-number"
+import { type UseIsInViewOptions, useIsInView } from "@repo/ui/hooks/use-is-in-view"
+import { getStrictContext } from "@repo/ui/lib/get-strict-context"
 import { cn } from "@repo/ui/lib/utils"
+import { type HTMLMotionProps, motion } from "motion/react"
+import * as React from "react"
 
 type GithubStarsContextType = {
   stars: number

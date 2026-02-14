@@ -1,18 +1,17 @@
 "use client"
 
-import * as React from "react"
+import { Slot, type WithAsChild } from "@repo/ui/components/animate-ui/primitives/animate/slot"
+import { useMotionValueState } from "@repo/ui/hooks/use-motion-value-state"
+import { getStrictContext } from "@repo/ui/lib/get-strict-context"
 import {
+  type HTMLMotionProps,
+  type MotionValue,
   motion,
+  type SpringOptions,
   useScroll,
   useSpring,
-  type MotionValue,
-  type HTMLMotionProps,
-  type SpringOptions,
 } from "motion/react"
-
-import { Slot, type WithAsChild } from "@repo/ui/components/animate-ui/primitives/animate/slot"
-import { getStrictContext } from "@repo/ui/lib/get-strict-context"
-import { useMotionValueState } from "@repo/ui/hooks/use-motion-value-state"
+import * as React from "react"
 
 type ScrollProgressDirection = "horizontal" | "vertical"
 

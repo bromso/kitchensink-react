@@ -1,8 +1,7 @@
 "use client"
 
+import { type UseIsInViewOptions, useIsInView } from "@repo/ui/hooks/use-is-in-view"
 import * as React from "react"
-
-import { useIsInView, type UseIsInViewOptions } from "@repo/ui/hooks/use-is-in-view"
 
 type CodeBlockProps = React.ComponentProps<"div"> & {
   code: string

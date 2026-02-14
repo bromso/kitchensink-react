@@ -1,9 +1,9 @@
 "use client"
 
-import { motion, type HTMLMotionProps, type Variant } from "motion/react"
+import { Slot, type WithAsChild } from "@repo/ui/components/animate-ui/primitives/animate/slot"
 
 import { getStrictContext } from "@repo/ui/lib/get-strict-context"
-import { Slot, type WithAsChild } from "@repo/ui/components/animate-ui/primitives/animate/slot"
+import { type HTMLMotionProps, motion, type Variant } from "motion/react"
 
 const buildVariant = ({
   opacity,

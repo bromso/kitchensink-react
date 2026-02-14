@@ -1,27 +1,26 @@
-import type * as React from "react"
-import { FolderIcon, FolderOpenIcon, FileIcon } from "lucide-react"
-
 import {
-  Files as FilesPrimitive,
-  FilesHighlight as FilesHighlightPrimitive,
-  FolderItem as FolderItemPrimitive,
-  FolderHeader as FolderHeaderPrimitive,
-  FolderTrigger as FolderTriggerPrimitive,
-  FolderHighlight as FolderHighlightPrimitive,
-  Folder as FolderPrimitive,
-  FolderIcon as FolderIconPrimitive,
-  FileLabel as FileLabelPrimitive,
-  FolderContent as FolderContentPrimitive,
   FileHighlight as FileHighlightPrimitive,
-  File as FilePrimitive,
   FileIcon as FileIconPrimitive,
-  type FilesProps as FilesPrimitiveProps,
-  type FolderItemProps as FolderItemPrimitiveProps,
-  type FolderContentProps as FolderContentPrimitiveProps,
-  type FileProps as FilePrimitiveProps,
+  FileLabel as FileLabelPrimitive,
   type FileLabelProps as FileLabelPrimitiveProps,
+  File as FilePrimitive,
+  type FileProps as FilePrimitiveProps,
+  FilesHighlight as FilesHighlightPrimitive,
+  Files as FilesPrimitive,
+  type FilesProps as FilesPrimitiveProps,
+  FolderContent as FolderContentPrimitive,
+  type FolderContentProps as FolderContentPrimitiveProps,
+  FolderHeader as FolderHeaderPrimitive,
+  FolderHighlight as FolderHighlightPrimitive,
+  FolderIcon as FolderIconPrimitive,
+  FolderItem as FolderItemPrimitive,
+  type FolderItemProps as FolderItemPrimitiveProps,
+  Folder as FolderPrimitive,
+  FolderTrigger as FolderTriggerPrimitive,
 } from "@repo/ui/components/animate-ui/primitives/radix/files"
 import { cn } from "@repo/ui/lib/utils"
+import { FileIcon, FolderIcon, FolderOpenIcon } from "lucide-react"
+import type * as React from "react"
 
 type GitStatus = "untracked" | "modified" | "deleted"
 

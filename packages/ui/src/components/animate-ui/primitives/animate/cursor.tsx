@@ -1,17 +1,16 @@
 "use client"
 
-import * as React from "react"
+import { Slot, type WithAsChild } from "@repo/ui/components/animate-ui/primitives/animate/slot"
+import { getStrictContext } from "@repo/ui/lib/get-strict-context"
 import {
-  motion,
-  useMotionValue,
-  useSpring,
   AnimatePresence,
   type HTMLMotionProps,
+  motion,
   type SpringOptions,
+  useMotionValue,
+  useSpring,
 } from "motion/react"
-
-import { getStrictContext } from "@repo/ui/lib/get-strict-context"
-import { Slot, type WithAsChild } from "@repo/ui/components/animate-ui/primitives/animate/slot"
+import * as React from "react"
 
 type CursorContextType = {
   cursorPos: { x: number; y: number }

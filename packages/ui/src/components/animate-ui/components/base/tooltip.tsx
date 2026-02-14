@@ -1,18 +1,16 @@
-
-
 import {
-  TooltipProvider as TooltipProviderPrimitive,
-  Tooltip as TooltipPrimitive,
-  TooltipTrigger as TooltipTriggerPrimitive,
-  TooltipPositioner as TooltipPositionerPrimitive,
-  TooltipPopup as TooltipPopupPrimitive,
   TooltipArrow as TooltipArrowPrimitive,
-  TooltipPortal as TooltipPortalPrimitive,
-  type TooltipProviderProps as TooltipProviderPrimitiveProps,
-  type TooltipProps as TooltipPrimitiveProps,
-  type TooltipTriggerProps as TooltipTriggerPrimitiveProps,
-  type TooltipPositionerProps as TooltipPositionerPrimitiveProps,
+  TooltipPopup as TooltipPopupPrimitive,
   type TooltipPopupProps as TooltipPopupPrimitiveProps,
+  TooltipPortal as TooltipPortalPrimitive,
+  TooltipPositioner as TooltipPositionerPrimitive,
+  type TooltipPositionerProps as TooltipPositionerPrimitiveProps,
+  Tooltip as TooltipPrimitive,
+  type TooltipProps as TooltipPrimitiveProps,
+  TooltipProvider as TooltipProviderPrimitive,
+  type TooltipProviderProps as TooltipProviderPrimitiveProps,
+  TooltipTrigger as TooltipTriggerPrimitive,
+  type TooltipTriggerProps as TooltipTriggerPrimitiveProps,
 } from "@repo/ui/components/animate-ui/primitives/base/tooltip"
 import { cn } from "@repo/ui/lib/utils"
 

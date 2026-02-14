@@ -1,21 +1,20 @@
 "use client"
 
-import * as React from "react"
 import { Tabs as TabsPrimitive } from "@base-ui-components/react/tabs"
-import { motion, AnimatePresence, type HTMLMotionProps, type Transition } from "motion/react"
-
-import {
-  Highlight,
-  HighlightItem,
-  type HighlightProps,
-  type HighlightItemProps,
-} from "@repo/ui/components/animate-ui/primitives/effects/highlight"
-import { getStrictContext } from "@repo/ui/lib/get-strict-context"
-import { useControlledState } from "@repo/ui/hooks/use-controlled-state"
 import {
   AutoHeight,
   type AutoHeightProps,
 } from "@repo/ui/components/animate-ui/primitives/effects/auto-height"
+import {
+  Highlight,
+  HighlightItem,
+  type HighlightItemProps,
+  type HighlightProps,
+} from "@repo/ui/components/animate-ui/primitives/effects/highlight"
+import { useControlledState } from "@repo/ui/hooks/use-controlled-state"
+import { getStrictContext } from "@repo/ui/lib/get-strict-context"
+import { AnimatePresence, type HTMLMotionProps, motion, type Transition } from "motion/react"
+import * as React from "react"
 
 type TabsContextType = {
   value: string | undefined

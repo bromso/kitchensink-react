@@ -1,20 +1,20 @@
 "use client"
 
-import * as React from "react"
-import { useTheme } from "next-themes"
-
-import { cn } from "@repo/ui/lib/utils"
+import { CopyButton } from "@repo/ui/components/animate-ui/components/buttons/copy"
 import {
   Tabs,
   TabsContent,
-  TabsList,
-  TabsTrigger,
   TabsContents,
   TabsHighlight,
   TabsHighlightItem,
+  TabsList,
   type TabsProps,
+  TabsTrigger,
 } from "@repo/ui/components/animate-ui/primitives/animate/tabs"
-import { CopyButton } from "@repo/ui/components/animate-ui/components/buttons/copy"
+
+import { cn } from "@repo/ui/lib/utils"
+import { useTheme } from "next-themes"
+import * as React from "react"
 
 type CodeTabsProps = {
   codes: Record<string, string>

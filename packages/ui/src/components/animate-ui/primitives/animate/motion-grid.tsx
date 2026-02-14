@@ -1,11 +1,11 @@
 "use client"
 
-import * as React from "react"
-import { motion, type HTMLMotionProps } from "motion/react"
+import { Slot, type WithAsChild } from "@repo/ui/components/animate-ui/primitives/animate/slot"
+import { getStrictContext } from "@repo/ui/lib/get-strict-context"
 
 import { cn } from "@repo/ui/lib/utils"
-import { getStrictContext } from "@repo/ui/lib/get-strict-context"
-import { Slot, type WithAsChild } from "@repo/ui/components/animate-ui/primitives/animate/slot"
+import { type HTMLMotionProps, motion } from "motion/react"
+import * as React from "react"
 
 type FrameDot = [number, number]
 type Frame = FrameDot[]

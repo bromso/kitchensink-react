@@ -1,17 +1,11 @@
 "use client"
 
-import * as React from "react"
-import { Slot } from "radix-ui"
-import { cva, type VariantProps } from "class-variance-authority"
-import { PanelLeftIcon } from "lucide-react"
-import type { Transition } from "motion/react"
-
-import { useIsMobile } from "@repo/ui/hooks/use-mobile"
-import { cn } from "@repo/ui/lib/utils"
-import { Button } from "@repo/ui/components/button"
-import { Input } from "@repo/ui/components/input"
-import { Separator } from "@repo/ui/components/separator"
-import { Skeleton } from "@repo/ui/components/skeleton"
+import {
+  Tooltip,
+  TooltipContent,
+  TooltipProvider,
+  TooltipTrigger,
+} from "@repo/ui/components/animate-ui/components/animate/tooltip"
 import {
   Sheet,
   SheetContent,
@@ -20,16 +14,21 @@ import {
   SheetTitle,
 } from "@repo/ui/components/animate-ui/components/radix/sheet"
 import {
-  TooltipProvider,
-  Tooltip,
-  TooltipContent,
-  TooltipTrigger,
-} from "@repo/ui/components/animate-ui/components/animate/tooltip"
-import {
   Highlight,
   HighlightItem,
 } from "@repo/ui/components/animate-ui/primitives/effects/highlight"
+import { Button } from "@repo/ui/components/button"
+import { Input } from "@repo/ui/components/input"
+import { Separator } from "@repo/ui/components/separator"
+import { Skeleton } from "@repo/ui/components/skeleton"
+import { useIsMobile } from "@repo/ui/hooks/use-mobile"
 import { getStrictContext } from "@repo/ui/lib/get-strict-context"
+import { cn } from "@repo/ui/lib/utils"
+import { cva, type VariantProps } from "class-variance-authority"
+import { PanelLeftIcon } from "lucide-react"
+import type { Transition } from "motion/react"
+import { Slot } from "radix-ui"
+import * as React from "react"
 
 const SIDEBAR_COOKIE_NAME = "sidebar_state"
 const SIDEBAR_COOKIE_MAX_AGE = 60 * 60 * 24 * 7

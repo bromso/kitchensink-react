@@ -1,15 +1,14 @@
 "use client"
 
-import type { VariantProps } from "class-variance-authority"
-
 import { buttonVariants } from "@repo/ui/components/animate-ui/components/buttons/button"
 import {
   RippleButton as RippleButtonPrimitive,
-  RippleButtonRipples as RippleButtonRipplesPrimitive,
   type RippleButtonProps as RippleButtonPrimitiveProps,
+  RippleButtonRipples as RippleButtonRipplesPrimitive,
   type RippleButtonRipplesProps as RippleButtonRipplesPrimitiveProps,
 } from "@repo/ui/components/animate-ui/primitives/buttons/ripple"
 import { cn } from "@repo/ui/lib/utils"
+import type { VariantProps } from "class-variance-authority"
 
 const rippleButtonVariants = {
   default: "[--ripple-button-ripple-color:var(--primary-foreground)]",

@@ -1,18 +1,17 @@
 "use client"
 
-import * as React from "react"
-import { DropdownMenu as DropdownMenuPrimitive } from "radix-ui"
-import { AnimatePresence, motion, type HTMLMotionProps } from "motion/react"
-
 import {
   Highlight,
   HighlightItem,
   type HighlightItemProps,
   type HighlightProps,
 } from "@repo/ui/components/animate-ui/primitives/effects/highlight"
-import { getStrictContext } from "@repo/ui/lib/get-strict-context"
 import { useControlledState } from "@repo/ui/hooks/use-controlled-state"
 import { useDataState } from "@repo/ui/hooks/use-data-state"
+import { getStrictContext } from "@repo/ui/lib/get-strict-context"
+import { AnimatePresence, type HTMLMotionProps, motion } from "motion/react"
+import { DropdownMenu as DropdownMenuPrimitive } from "radix-ui"
+import * as React from "react"
 
 type DropdownMenuContextType = {
   isOpen: boolean

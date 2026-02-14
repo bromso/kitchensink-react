@@ -1,18 +1,17 @@
-
-import type { VariantProps } from "class-variance-authority"
+import { toggleVariants } from "@repo/ui/components/animate-ui/components/radix/toggle"
 
 import {
-  ToggleGroup as ToggleGroupPrimitive,
-  ToggleGroupItem as ToggleGroupItemPrimitive,
-  ToggleGroupHighlight as ToggleGroupHighlightPrimitive,
   ToggleGroupHighlightItem as ToggleGroupHighlightItemPrimitive,
-  useToggleGroup as useToggleGroupPrimitive,
-  type ToggleGroupProps as ToggleGroupPrimitiveProps,
+  ToggleGroupHighlight as ToggleGroupHighlightPrimitive,
+  ToggleGroupItem as ToggleGroupItemPrimitive,
   type ToggleGroupItemProps as ToggleGroupItemPrimitiveProps,
+  ToggleGroup as ToggleGroupPrimitive,
+  type ToggleGroupProps as ToggleGroupPrimitiveProps,
+  useToggleGroup as useToggleGroupPrimitive,
 } from "@repo/ui/components/animate-ui/primitives/radix/toggle-group"
-import { toggleVariants } from "@repo/ui/components/animate-ui/components/radix/toggle"
-import { cn } from "@repo/ui/lib/utils"
 import { getStrictContext } from "@repo/ui/lib/get-strict-context"
+import { cn } from "@repo/ui/lib/utils"
+import type { VariantProps } from "class-variance-authority"
 
 const [ToggleGroupProvider, useToggleGroup] =
   getStrictContext<VariantProps<typeof toggleVariants>>("ToggleGroupContext")

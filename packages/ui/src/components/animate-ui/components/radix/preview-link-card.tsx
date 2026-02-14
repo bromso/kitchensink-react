@@ -1,15 +1,13 @@
-
-
 import {
-  PreviewLinkCard as PreviewLinkCardPrimitive,
-  PreviewLinkCardTrigger as PreviewLinkCardTriggerPrimitive,
-  PreviewLinkCardPortal as PreviewLinkCardPortalPrimitive,
   PreviewLinkCardContent as PreviewLinkCardContentPrimitive,
-  PreviewLinkCardImage as PreviewLinkCardImagePrimitive,
-  type PreviewLinkCardProps as PreviewLinkCardPrimitiveProps,
-  type PreviewLinkCardTriggerProps as PreviewLinkCardTriggerPrimitiveProps,
   type PreviewLinkCardContentProps as PreviewLinkCardContentPrimitiveProps,
+  PreviewLinkCardImage as PreviewLinkCardImagePrimitive,
   type PreviewLinkCardImageProps as PreviewLinkCardImagePrimitiveProps,
+  PreviewLinkCardPortal as PreviewLinkCardPortalPrimitive,
+  PreviewLinkCard as PreviewLinkCardPrimitive,
+  type PreviewLinkCardProps as PreviewLinkCardPrimitiveProps,
+  PreviewLinkCardTrigger as PreviewLinkCardTriggerPrimitive,
+  type PreviewLinkCardTriggerProps as PreviewLinkCardTriggerPrimitiveProps,
 } from "@repo/ui/components/animate-ui/primitives/radix/preview-link-card"
 import { cn } from "@repo/ui/lib/utils"
 

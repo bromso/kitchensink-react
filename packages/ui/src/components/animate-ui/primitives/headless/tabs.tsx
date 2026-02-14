@@ -1,21 +1,20 @@
 "use client"
 
-import * as React from "react"
 import {
   TabGroup as TabGroupPrimitive,
-  TabList as TabListPrimitive,
-  Tab as TabPrimitive,
-  TabPanel as TabPanelPrimitive,
-  TabPanels as TabPanelsPrimitive,
   type TabGroupProps as TabGroupPrimitiveProps,
+  TabList as TabListPrimitive,
   type TabListProps as TabListPrimitiveProps,
-  type TabProps as TabPrimitiveProps,
+  TabPanel as TabPanelPrimitive,
   type TabPanelProps as TabPanelPrimitiveProps,
+  TabPanels as TabPanelsPrimitive,
   type TabPanelsProps as TabPanelsPrimitiveProps,
+  Tab as TabPrimitive,
+  type TabProps as TabPrimitiveProps,
 } from "@headlessui/react"
-import { motion, type Transition, type HTMLMotionProps } from "motion/react"
-
 import { getStrictContext } from "@repo/ui/lib/get-strict-context"
+import type { HTMLMotionProps, motion, Transition } from "motion/react"
+import * as React from "react"
 
 type TabsContextType = {
   selectedIndex: number
@@ -64,10 +63,11 @@ function Tab<TTag extends React.ElementType = "button">(props: TabProps<TTag>) {
   return <TabPrimitive data-slot="tab" {...rest} />
 }
 
-type TabPanelsProps<TTag extends React.ElementType = typeof motion.div> = TabPanelsPrimitiveProps<TTag> &
-  HTMLMotionProps<"div"> & {
-    transition?: Transition
-  }
+type TabPanelsProps<TTag extends React.ElementType = typeof motion.div> =
+  TabPanelsPrimitiveProps<TTag> &
+    HTMLMotionProps<"div"> & {
+      transition?: Transition
+    }
 
 function TabPanels<TTag extends React.ElementType = typeof motion.div>({
   transition = {
@@ -81,10 +81,11 @@ function TabPanels<TTag extends React.ElementType = typeof motion.div>({
   return <TabPanelsPrimitive data-slot="tab-panels" {...props} />
 }
 
-type TabPanelProps<TTag extends React.ElementType = typeof motion.div> = TabPanelPrimitiveProps<TTag> &
-  HTMLMotionProps<"div"> & {
-    index?: number
-  }
+type TabPanelProps<TTag extends React.ElementType = typeof motion.div> =
+  TabPanelPrimitiveProps<TTag> &
+    HTMLMotionProps<"div"> & {
+      index?: number
+    }
 
 function TabPanel<TTag extends React.ElementType = typeof motion.div>({
   index: _index,

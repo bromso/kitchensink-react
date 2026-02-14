@@ -1,19 +1,18 @@
 "use client"
 
-import type * as React from "react"
-import { HoverCard as HoverCardPrimitive } from "radix-ui"
+import { useControlledState } from "@repo/ui/hooks/use-controlled-state"
+import { getStrictContext } from "@repo/ui/lib/get-strict-context"
 import {
   AnimatePresence,
+  type HTMLMotionProps,
+  type MotionValue,
   motion,
+  type SpringOptions,
   useMotionValue,
   useSpring,
-  type MotionValue,
-  type HTMLMotionProps,
-  type SpringOptions,
 } from "motion/react"
-
-import { getStrictContext } from "@repo/ui/lib/get-strict-context"
-import { useControlledState } from "@repo/ui/hooks/use-controlled-state"
+import { HoverCard as HoverCardPrimitive } from "radix-ui"
+import type * as React from "react"
 
 type HoverCardContextType = {
   isOpen: boolean

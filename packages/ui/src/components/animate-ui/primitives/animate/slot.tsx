@@ -1,8 +1,8 @@
 "use client"
 
-import * as React from "react"
-import { motion, isMotionComponent, type HTMLMotionProps } from "motion/react"
 import { cn } from "@repo/ui/lib/utils"
+import { type HTMLMotionProps, isMotionComponent, motion } from "motion/react"
+import * as React from "react"
 
 type AnyProps = Record<string, unknown>
 

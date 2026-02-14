@@ -1,12 +1,11 @@
-import type * as React from "react"
-
 import {
-  Switch as SwitchPrimitive,
-  SwitchThumb as SwitchThumbPrimitive,
   SwitchIcon as SwitchIconPrimitive,
+  Switch as SwitchPrimitive,
   type SwitchProps as SwitchPrimitiveProps,
+  SwitchThumb as SwitchThumbPrimitive,
 } from "@repo/ui/components/animate-ui/primitives/radix/switch"
 import { cn } from "@repo/ui/lib/utils"
+import type * as React from "react"
 
 type SwitchProps = SwitchPrimitiveProps & {
   pressedWidth?: number

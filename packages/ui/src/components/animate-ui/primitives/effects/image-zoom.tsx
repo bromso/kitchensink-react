@@ -1,7 +1,7 @@
 "use client"
 
-import * as React from "react"
 import { motion, type Transition } from "motion/react"
+import * as React from "react"
 
 type ImageZoomProps = {
   zoomScale?: number

@@ -1,16 +1,15 @@
-import type * as React from "react"
-import type { motion } from "motion/react"
-import { ChevronDownIcon } from "lucide-react"
-
 import {
-  Disclosure as DisclosurePrimitive,
   DisclosureButton as DisclosureButtonPrimitive,
-  DisclosurePanel as DisclosurePanelPrimitive,
-  type DisclosureProps as DisclosurePrimitiveProps,
   type DisclosureButtonProps as DisclosureButtonPrimitiveProps,
+  DisclosurePanel as DisclosurePanelPrimitive,
   type DisclosurePanelProps as DisclosurePanelPrimitiveProps,
+  Disclosure as DisclosurePrimitive,
+  type DisclosureProps as DisclosurePrimitiveProps,
 } from "@repo/ui/components/animate-ui/primitives/headless/disclosure"
 import { cn } from "@repo/ui/lib/utils"
+import { ChevronDownIcon } from "lucide-react"
+import type { motion } from "motion/react"
+import type * as React from "react"
 
 type AccordionProps<TTag extends React.ElementType = "div"> = React.ComponentProps<TTag> & {
   children: React.ReactNode

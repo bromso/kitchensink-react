@@ -1,15 +1,14 @@
 "use client"
 
-import * as React from "react"
-import { useTheme } from "next-themes"
-
+import { CopyButton } from "@repo/ui/components/animate-ui/components/buttons/copy"
 import {
   CodeBlock as CodeBlockPrimitive,
   type CodeBlockProps as CodeBlockPropsPrimitive,
 } from "@repo/ui/components/animate-ui/primitives/animate/code-block"
-import { cn } from "@repo/ui/lib/utils"
-import { CopyButton } from "@repo/ui/components/animate-ui/components/buttons/copy"
 import { getStrictContext } from "@repo/ui/lib/get-strict-context"
+import { cn } from "@repo/ui/lib/utils"
+import { useTheme } from "next-themes"
+import * as React from "react"
 
 type CodeContextType = {
   code: string

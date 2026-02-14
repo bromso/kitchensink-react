@@ -1,27 +1,25 @@
-
-
-import {
-  AlertDialog as AlertDialogPrimitive,
-  AlertDialogPopup as AlertDialogPopupPrimitive,
-  AlertDialogDescription as AlertDialogDescriptionPrimitive,
-  AlertDialogFooter as AlertDialogFooterPrimitive,
-  AlertDialogHeader as AlertDialogHeaderPrimitive,
-  AlertDialogTitle as AlertDialogTitlePrimitive,
-  AlertDialogTrigger as AlertDialogTriggerPrimitive,
-  AlertDialogPortal as AlertDialogPortalPrimitive,
-  AlertDialogBackdrop as AlertDialogBackdropPrimitive,
-  AlertDialogClose as AlertDialogClosePrimitive,
-  type AlertDialogProps as AlertDialogPrimitiveProps,
-  type AlertDialogPopupProps as AlertDialogPopupPrimitiveProps,
-  type AlertDialogDescriptionProps as AlertDialogDescriptionPrimitiveProps,
-  type AlertDialogFooterProps as AlertDialogFooterPrimitiveProps,
-  type AlertDialogHeaderProps as AlertDialogHeaderPrimitiveProps,
-  type AlertDialogTitleProps as AlertDialogTitlePrimitiveProps,
-  type AlertDialogTriggerProps as AlertDialogTriggerPrimitiveProps,
-  type AlertDialogBackdropProps as AlertDialogBackdropPrimitiveProps,
-  type AlertDialogCloseProps as AlertDialogClosePrimitiveProps,
-} from "@repo/ui/components/animate-ui/primitives/base/alert-dialog"
 import { buttonVariants } from "@repo/ui/components/animate-ui/components/buttons/button"
+import {
+  AlertDialogBackdrop as AlertDialogBackdropPrimitive,
+  type AlertDialogBackdropProps as AlertDialogBackdropPrimitiveProps,
+  AlertDialogClose as AlertDialogClosePrimitive,
+  type AlertDialogCloseProps as AlertDialogClosePrimitiveProps,
+  AlertDialogDescription as AlertDialogDescriptionPrimitive,
+  type AlertDialogDescriptionProps as AlertDialogDescriptionPrimitiveProps,
+  AlertDialogFooter as AlertDialogFooterPrimitive,
+  type AlertDialogFooterProps as AlertDialogFooterPrimitiveProps,
+  AlertDialogHeader as AlertDialogHeaderPrimitive,
+  type AlertDialogHeaderProps as AlertDialogHeaderPrimitiveProps,
+  AlertDialogPopup as AlertDialogPopupPrimitive,
+  type AlertDialogPopupProps as AlertDialogPopupPrimitiveProps,
+  AlertDialogPortal as AlertDialogPortalPrimitive,
+  AlertDialog as AlertDialogPrimitive,
+  type AlertDialogProps as AlertDialogPrimitiveProps,
+  AlertDialogTitle as AlertDialogTitlePrimitive,
+  type AlertDialogTitleProps as AlertDialogTitlePrimitiveProps,
+  AlertDialogTrigger as AlertDialogTriggerPrimitive,
+  type AlertDialogTriggerProps as AlertDialogTriggerPrimitiveProps,
+} from "@repo/ui/components/animate-ui/primitives/base/alert-dialog"
 import { cn } from "@repo/ui/lib/utils"
 
 type AlertDialogProps = AlertDialogPrimitiveProps

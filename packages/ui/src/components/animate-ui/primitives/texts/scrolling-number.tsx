@@ -1,17 +1,16 @@
 "use client"
 
-import * as React from "react"
+import { type UseIsInViewOptions, useIsInView } from "@repo/ui/hooks/use-is-in-view"
+import { getStrictContext } from "@repo/ui/lib/get-strict-context"
 import {
+  type HTMLMotionProps,
+  type MotionValue,
   motion,
   useMotionValue,
   useSpring,
   useTransform,
-  type MotionValue,
-  type HTMLMotionProps,
 } from "motion/react"
-
-import { useIsInView, type UseIsInViewOptions } from "@repo/ui/hooks/use-is-in-view"
-import { getStrictContext } from "@repo/ui/lib/get-strict-context"
+import * as React from "react"
 
 const formatter = new Intl.NumberFormat("en-US")
 

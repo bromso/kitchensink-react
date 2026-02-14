@@ -2,10 +2,9 @@
 
 "use client"
 
-import * as React from "react"
-import { motion } from "motion/react"
-
 import { cn } from "@repo/ui/lib/utils"
+import { motion } from "motion/react"
+import * as React from "react"
 
 type HoleBackgroundProps = React.ComponentProps<"div"> & {
   strokeColor?: string

@@ -1,19 +1,17 @@
-
-
 import {
-  PreviewLinkCard as PreviewLinkCardPrimitive,
-  PreviewLinkCardTrigger as PreviewLinkCardTriggerPrimitive,
+  PreviewLinkCardBackdrop as PreviewLinkCardBackdropPrimitive,
+  type PreviewLinkCardBackdropProps as PreviewLinkCardBackdropPrimitiveProps,
+  PreviewLinkCardImage as PreviewLinkCardImagePrimitive,
+  type PreviewLinkCardImageProps as PreviewLinkCardImagePrimitiveProps,
+  PreviewLinkCardPopup as PreviewLinkCardPopupPrimitive,
+  type PreviewLinkCardPopupProps as PreviewLinkCardPopupPrimitiveProps,
   PreviewLinkCardPortal as PreviewLinkCardPortalPrimitive,
   PreviewLinkCardPositioner as PreviewLinkCardPositionerPrimitive,
-  PreviewLinkCardPopup as PreviewLinkCardPopupPrimitive,
-  PreviewLinkCardImage as PreviewLinkCardImagePrimitive,
-  PreviewLinkCardBackdrop as PreviewLinkCardBackdropPrimitive,
-  type PreviewLinkCardProps as PreviewLinkCardPrimitiveProps,
-  type PreviewLinkCardTriggerProps as PreviewLinkCardTriggerPrimitiveProps,
   type PreviewLinkCardPositionerProps as PreviewLinkCardPositionerPrimitiveProps,
-  type PreviewLinkCardPopupProps as PreviewLinkCardPopupPrimitiveProps,
-  type PreviewLinkCardImageProps as PreviewLinkCardImagePrimitiveProps,
-  type PreviewLinkCardBackdropProps as PreviewLinkCardBackdropPrimitiveProps,
+  PreviewLinkCard as PreviewLinkCardPrimitive,
+  type PreviewLinkCardProps as PreviewLinkCardPrimitiveProps,
+  PreviewLinkCardTrigger as PreviewLinkCardTriggerPrimitive,
+  type PreviewLinkCardTriggerProps as PreviewLinkCardTriggerPrimitiveProps,
 } from "@repo/ui/components/animate-ui/primitives/base/preview-link-card"
 import { cn } from "@repo/ui/lib/utils"
 

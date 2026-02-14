@@ -1,14 +1,14 @@
 "use client"
 
-import * as React from "react"
 import {
+  type AnimationSequence,
+  delay,
   LayoutGroup,
   motion,
-  useAnimate,
-  delay,
   type Transition,
-  type AnimationSequence,
+  useAnimate,
 } from "motion/react"
+import * as React from "react"
 
 interface ComponentProps {
   orbitItems: OrbitItem[]

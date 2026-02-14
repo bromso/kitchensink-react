@@ -1,13 +1,12 @@
 "use client"
 
-import type * as React from "react"
 import {
   Checkbox as CheckboxPrimitive,
   type CheckboxProps as CheckboxPrimitiveProps,
 } from "@headlessui/react"
-import { motion, type SVGMotionProps, type HTMLMotionProps } from "motion/react"
-
 import { getStrictContext } from "@repo/ui/lib/get-strict-context"
+import { type HTMLMotionProps, motion, type SVGMotionProps } from "motion/react"
+import type * as React from "react"
 
 type CheckboxContextType = {
   isChecked: boolean

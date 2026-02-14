@@ -1,8 +1,6 @@
-
-
 import {
-  Checkbox as CheckboxPrimitive,
   CheckboxIndicator as CheckboxIndicatorPrimitive,
+  Checkbox as CheckboxPrimitive,
   type CheckboxProps as CheckboxPrimitiveProps,
 } from "@repo/ui/components/animate-ui/primitives/radix/checkbox"
 import { cn } from "@repo/ui/lib/utils"

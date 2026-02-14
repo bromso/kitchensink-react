@@ -1,18 +1,17 @@
-import type * as React from "react"
-import { ChevronDownIcon } from "lucide-react"
-
 import {
-  Accordion as AccordionPrimitive,
-  AccordionItem as AccordionItemPrimitive,
   AccordionHeader as AccordionHeaderPrimitive,
-  AccordionTrigger as AccordionTriggerPrimitive,
-  AccordionPanel as AccordionPanelPrimitive,
-  type AccordionProps as AccordionPrimitiveProps,
+  AccordionItem as AccordionItemPrimitive,
   type AccordionItemProps as AccordionItemPrimitiveProps,
-  type AccordionTriggerProps as AccordionTriggerPrimitiveProps,
+  AccordionPanel as AccordionPanelPrimitive,
   type AccordionPanelProps as AccordionPanelPrimitiveProps,
+  Accordion as AccordionPrimitive,
+  type AccordionProps as AccordionPrimitiveProps,
+  AccordionTrigger as AccordionTriggerPrimitive,
+  type AccordionTriggerProps as AccordionTriggerPrimitiveProps,
 } from "@repo/ui/components/animate-ui/primitives/base/accordion"
 import { cn } from "@repo/ui/lib/utils"
+import { ChevronDownIcon } from "lucide-react"
+import type * as React from "react"
 
 type AccordionProps = AccordionPrimitiveProps
 

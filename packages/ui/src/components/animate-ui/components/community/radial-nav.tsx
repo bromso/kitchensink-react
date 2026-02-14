@@ -1,8 +1,8 @@
 "use client"
 
+import { type LucideIcon, MousePointer2 } from "lucide-react"
+import { motion, type Transition, type Variants } from "motion/react"
 import * as React from "react"
-import { MousePointer2, type LucideIcon } from "lucide-react"
-import { motion, type Variants, type Transition } from "motion/react"
 
 type RadialNavProps = {
   size?: number

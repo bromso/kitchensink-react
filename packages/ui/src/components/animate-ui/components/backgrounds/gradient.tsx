@@ -1,8 +1,7 @@
 "use client"
 
-import { motion, type HTMLMotionProps } from "motion/react"
-
 import { cn } from "@repo/ui/lib/utils"
+import { type HTMLMotionProps, motion } from "motion/react"
 
 type GradientBackgroundProps = HTMLMotionProps<"div">
 

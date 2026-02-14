@@ -1,18 +1,17 @@
 "use client"
 
-import * as React from "react"
-import {
-  motion,
-  useMotionValue,
-  useSpring as useMotionSpring,
-  type SpringOptions,
-  type HTMLMotionProps,
-  type MotionValue,
-} from "motion/react"
-
+import { Slot, type WithAsChild } from "@repo/ui/components/animate-ui/primitives/animate/slot"
 import { useMotionValueState } from "@repo/ui/hooks/use-motion-value-state"
 import { getStrictContext } from "@repo/ui/lib/get-strict-context"
-import { Slot, type WithAsChild } from "@repo/ui/components/animate-ui/primitives/animate/slot"
+import {
+  type HTMLMotionProps,
+  type MotionValue,
+  motion,
+  type SpringOptions,
+  useSpring as useMotionSpring,
+  useMotionValue,
+} from "motion/react"
+import * as React from "react"
 
 type SpringPathConfig = {
   coilCount?: number

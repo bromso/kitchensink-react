@@ -1,10 +1,9 @@
 "use client"
 
-import type * as React from "react"
-import { Progress as ProgressPrimitive } from "radix-ui"
-import { motion } from "motion/react"
-
 import { getStrictContext } from "@repo/ui/lib/get-strict-context"
+import { motion } from "motion/react"
+import { Progress as ProgressPrimitive } from "radix-ui"
+import type * as React from "react"
 
 type ProgressContextType = {
   value: number

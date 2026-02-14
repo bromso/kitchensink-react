@@ -1,9 +1,8 @@
 "use client"
 
+import { type UseIsInViewOptions, useIsInView } from "@repo/ui/hooks/use-is-in-view"
+import { type HTMLMotionProps, motion } from "motion/react"
 import type * as React from "react"
-import { motion, type HTMLMotionProps } from "motion/react"
-
-import { useIsInView, type UseIsInViewOptions } from "@repo/ui/hooks/use-is-in-view"
 
 type HighlightTextProps = Omit<HTMLMotionProps<"span">, "children"> & {
   text: string

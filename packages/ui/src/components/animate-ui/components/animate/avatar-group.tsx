@@ -1,14 +1,13 @@
-import type * as React from "react"
-import * as motion from "motion/react-client"
-
 import {
   AvatarGroup as AvatarGroupPrimitive,
-  AvatarGroupTooltip as AvatarGroupTooltipPrimitive,
-  AvatarGroupTooltipArrow as AvatarGroupTooltipArrowPrimitive,
   type AvatarGroupProps as AvatarGroupPropsPrimitive,
+  AvatarGroupTooltipArrow as AvatarGroupTooltipArrowPrimitive,
+  AvatarGroupTooltip as AvatarGroupTooltipPrimitive,
   type AvatarGroupTooltipProps as AvatarGroupTooltipPropsPrimitive,
 } from "@repo/ui/components/animate-ui/primitives/animate/avatar-group"
 import { cn } from "@repo/ui/lib/utils"
+import * as motion from "motion/react-client"
+import type * as React from "react"
 
 type AvatarGroupProps = AvatarGroupPropsPrimitive
 

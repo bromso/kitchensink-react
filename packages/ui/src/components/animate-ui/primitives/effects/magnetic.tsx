@@ -1,15 +1,14 @@
 "use client"
 
-import * as React from "react"
+import { Slot, type WithAsChild } from "@repo/ui/components/animate-ui/primitives/animate/slot"
 import {
+  type HTMLMotionProps,
   motion,
+  type SpringOptions,
   useMotionValue,
   useSpring,
-  type SpringOptions,
-  type HTMLMotionProps,
 } from "motion/react"
-
-import { Slot, type WithAsChild } from "@repo/ui/components/animate-ui/primitives/animate/slot"
+import * as React from "react"
 
 type MagneticProps = WithAsChild<
   {

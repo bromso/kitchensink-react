@@ -1,23 +1,21 @@
-
-
 import {
-  Popover as PopoverPrimitive,
-  PopoverTrigger as PopoverTriggerPrimitive,
-  PopoverPositioner as PopoverPositionerPrimitive,
-  PopoverPopup as PopoverPopupPrimitive,
-  PopoverPortal as PopoverPortalPrimitive,
-  PopoverClose as PopoverClosePrimitive,
   PopoverBackdrop as PopoverBackdropPrimitive,
-  PopoverTitle as PopoverTitlePrimitive,
-  PopoverDescription as PopoverDescriptionPrimitive,
-  type PopoverProps as PopoverPrimitiveProps,
-  type PopoverTriggerProps as PopoverTriggerPrimitiveProps,
-  type PopoverPositionerProps as PopoverPositionerPrimitiveProps,
-  type PopoverPopupProps as PopoverPopupPrimitiveProps,
-  type PopoverCloseProps as PopoverClosePrimitiveProps,
   type PopoverBackdropProps as PopoverBackdropPrimitiveProps,
-  type PopoverTitleProps as PopoverTitlePrimitiveProps,
+  PopoverClose as PopoverClosePrimitive,
+  type PopoverCloseProps as PopoverClosePrimitiveProps,
+  PopoverDescription as PopoverDescriptionPrimitive,
   type PopoverDescriptionProps as PopoverDescriptionPrimitiveProps,
+  PopoverPopup as PopoverPopupPrimitive,
+  type PopoverPopupProps as PopoverPopupPrimitiveProps,
+  PopoverPortal as PopoverPortalPrimitive,
+  PopoverPositioner as PopoverPositionerPrimitive,
+  type PopoverPositionerProps as PopoverPositionerPrimitiveProps,
+  Popover as PopoverPrimitive,
+  type PopoverProps as PopoverPrimitiveProps,
+  PopoverTitle as PopoverTitlePrimitive,
+  type PopoverTitleProps as PopoverTitlePrimitiveProps,
+  PopoverTrigger as PopoverTriggerPrimitive,
+  type PopoverTriggerProps as PopoverTriggerPrimitiveProps,
 } from "@repo/ui/components/animate-ui/primitives/base/popover"
 import { cn } from "@repo/ui/lib/utils"
 

@@ -1,29 +1,27 @@
-
-
-import {
-  AlertDialog as AlertDialogPrimitive,
-  AlertDialogContent as AlertDialogContentPrimitive,
-  AlertDialogDescription as AlertDialogDescriptionPrimitive,
-  AlertDialogFooter as AlertDialogFooterPrimitive,
-  AlertDialogHeader as AlertDialogHeaderPrimitive,
-  AlertDialogTitle as AlertDialogTitlePrimitive,
-  AlertDialogTrigger as AlertDialogTriggerPrimitive,
-  AlertDialogPortal as AlertDialogPortalPrimitive,
-  AlertDialogOverlay as AlertDialogOverlayPrimitive,
-  AlertDialogAction as AlertDialogActionPrimitive,
-  AlertDialogCancel as AlertDialogCancelPrimitive,
-  type AlertDialogProps as AlertDialogPrimitiveProps,
-  type AlertDialogContentProps as AlertDialogContentPrimitiveProps,
-  type AlertDialogDescriptionProps as AlertDialogDescriptionPrimitiveProps,
-  type AlertDialogFooterProps as AlertDialogFooterPrimitiveProps,
-  type AlertDialogHeaderProps as AlertDialogHeaderPrimitiveProps,
-  type AlertDialogTitleProps as AlertDialogTitlePrimitiveProps,
-  type AlertDialogTriggerProps as AlertDialogTriggerPrimitiveProps,
-  type AlertDialogOverlayProps as AlertDialogOverlayPrimitiveProps,
-  type AlertDialogActionProps as AlertDialogActionPrimitiveProps,
-  type AlertDialogCancelProps as AlertDialogCancelPrimitiveProps,
-} from "@repo/ui/components/animate-ui/primitives/radix/alert-dialog"
 import { buttonVariants } from "@repo/ui/components/animate-ui/components/buttons/button"
+import {
+  AlertDialogAction as AlertDialogActionPrimitive,
+  type AlertDialogActionProps as AlertDialogActionPrimitiveProps,
+  AlertDialogCancel as AlertDialogCancelPrimitive,
+  type AlertDialogCancelProps as AlertDialogCancelPrimitiveProps,
+  AlertDialogContent as AlertDialogContentPrimitive,
+  type AlertDialogContentProps as AlertDialogContentPrimitiveProps,
+  AlertDialogDescription as AlertDialogDescriptionPrimitive,
+  type AlertDialogDescriptionProps as AlertDialogDescriptionPrimitiveProps,
+  AlertDialogFooter as AlertDialogFooterPrimitive,
+  type AlertDialogFooterProps as AlertDialogFooterPrimitiveProps,
+  AlertDialogHeader as AlertDialogHeaderPrimitive,
+  type AlertDialogHeaderProps as AlertDialogHeaderPrimitiveProps,
+  AlertDialogOverlay as AlertDialogOverlayPrimitive,
+  type AlertDialogOverlayProps as AlertDialogOverlayPrimitiveProps,
+  AlertDialogPortal as AlertDialogPortalPrimitive,
+  AlertDialog as AlertDialogPrimitive,
+  type AlertDialogProps as AlertDialogPrimitiveProps,
+  AlertDialogTitle as AlertDialogTitlePrimitive,
+  type AlertDialogTitleProps as AlertDialogTitlePrimitiveProps,
+  AlertDialogTrigger as AlertDialogTriggerPrimitive,
+  type AlertDialogTriggerProps as AlertDialogTriggerPrimitiveProps,
+} from "@repo/ui/components/animate-ui/primitives/radix/alert-dialog"
 import { cn } from "@repo/ui/lib/utils"
 
 type AlertDialogProps = AlertDialogPrimitiveProps

@@ -1,9 +1,8 @@
 "use client"
 
+import { type UseIsInViewOptions, useIsInView } from "@repo/ui/hooks/use-is-in-view"
+import { type SpringOptions, useMotionValue, useSpring } from "motion/react"
 import * as React from "react"
-import { useMotionValue, useSpring, type SpringOptions } from "motion/react"
-
-import { useIsInView, type UseIsInViewOptions } from "@repo/ui/hooks/use-is-in-view"
 
 type CountingNumberProps = Omit<React.ComponentProps<"span">, "children"> & {
   number: number

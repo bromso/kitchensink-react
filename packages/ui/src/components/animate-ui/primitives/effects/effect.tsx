@@ -1,10 +1,9 @@
 "use client"
 
-import * as React from "react"
-import { motion, type HTMLMotionProps, type Variant } from "motion/react"
-
-import { useIsInView, type UseIsInViewOptions } from "@repo/ui/hooks/use-is-in-view"
 import { Slot, type WithAsChild } from "@repo/ui/components/animate-ui/primitives/animate/slot"
+import { type UseIsInViewOptions, useIsInView } from "@repo/ui/hooks/use-is-in-view"
+import { type HTMLMotionProps, motion, type Variant } from "motion/react"
+import * as React from "react"
 
 type SlideDirection = "up" | "down" | "left" | "right"
 

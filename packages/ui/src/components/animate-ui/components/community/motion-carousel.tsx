@@ -1,11 +1,11 @@
 "use client"
 
-import * as React from "react"
-import { motion, type Transition } from "motion/react"
-import type { EmblaOptionsType, EmblaCarouselType } from "embla-carousel"
-import useEmblaCarousel from "embla-carousel-react"
 import { Button } from "@repo/ui/components/animate-ui/components/buttons/button"
-import { ChevronRight, ChevronLeft } from "lucide-react"
+import type { EmblaCarouselType, EmblaOptionsType } from "embla-carousel"
+import useEmblaCarousel from "embla-carousel-react"
+import { ChevronLeft, ChevronRight } from "lucide-react"
+import { motion, type Transition } from "motion/react"
+import * as React from "react"
 
 type PropType = {
   slides: number[]
@@ -52,14 +52,20 @@ const useEmblaControls = (emblaApi: EmblaCarouselType | undefined): EmblaControl
     setNextDisabled(!api.canScrollNext())
   }
 
-  const onInit = React.useCallback((api: EmblaCarouselType) => {
-    setScrollSnaps(api.scrollSnapList())
-    updateSelectionState(api)
-  }, [updateSelectionState])
+  const onInit = React.useCallback(
+    (api: EmblaCarouselType) => {
+      setScrollSnaps(api.scrollSnapList())
+      updateSelectionState(api)
+    },
+    [updateSelectionState]
+  )
 
-  const onSelect = React.useCallback((api: EmblaCarouselType) => {
-    updateSelectionState(api)
-  }, [updateSelectionState])
+  const onSelect = React.useCallback(
+    (api: EmblaCarouselType) => {
+      updateSelectionState(api)
+    },
+    [updateSelectionState]
+  )
 
   React.useEffect(() => {
     if (!emblaApi) return

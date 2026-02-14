@@ -1,20 +1,19 @@
 "use client"
 
-import * as React from "react"
-import { StarIcon } from "lucide-react"
-
-import {
-  ScrollingNumber as ScrollingNumberPrimitive,
-  ScrollingNumberContainer as ScrollingNumberContainerPrimitive,
-  ScrollingNumberItems as ScrollingNumberItemsPrimitive,
-  ScrollingNumberHighlight as ScrollingNumberHighlightPrimitive,
-  type ScrollingNumberContainerProps as ScrollingNumberContainerPrimitiveProps,
-} from "@repo/ui/components/animate-ui/primitives/texts/scrolling-number"
-import { cn } from "@repo/ui/lib/utils"
 import {
   Particles,
   ParticlesEffect,
 } from "@repo/ui/components/animate-ui/primitives/effects/particles"
+import {
+  ScrollingNumberContainer as ScrollingNumberContainerPrimitive,
+  type ScrollingNumberContainerProps as ScrollingNumberContainerPrimitiveProps,
+  ScrollingNumberHighlight as ScrollingNumberHighlightPrimitive,
+  ScrollingNumberItems as ScrollingNumberItemsPrimitive,
+  ScrollingNumber as ScrollingNumberPrimitive,
+} from "@repo/ui/components/animate-ui/primitives/texts/scrolling-number"
+import { cn } from "@repo/ui/lib/utils"
+import { StarIcon } from "lucide-react"
+import * as React from "react"
 
 function percentageBetween(value: number, min: number, max: number): number {
   return ((value - min) / (max - min)) * 100

@@ -1,8 +1,7 @@
 "use client"
 
-import * as React from "react"
-
 import { cn } from "@repo/ui/lib/utils"
+import * as React from "react"
 
 const rand = (min: number, max: number): number => Math.random() * (max - min) + min
 

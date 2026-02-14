@@ -1,18 +1,17 @@
 "use client"
 
-import * as React from "react"
+import { type UseIsInViewOptions, useIsInView } from "@repo/ui/hooks/use-is-in-view"
 import {
+  type HTMLMotionProps,
+  type MotionValue,
+  motion,
+  type SpringOptions,
+  useMotionValue,
   useSpring,
   useTransform,
-  motion,
-  useMotionValue,
-  type MotionValue,
-  type SpringOptions,
-  type HTMLMotionProps,
 } from "motion/react"
+import * as React from "react"
 import useMeasure from "react-use-measure"
-
-import { useIsInView, type UseIsInViewOptions } from "@repo/ui/hooks/use-is-in-view"
 
 type SlidingNumberRollerProps = {
   prevValue: number

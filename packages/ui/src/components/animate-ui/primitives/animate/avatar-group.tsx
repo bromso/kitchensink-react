@@ -1,19 +1,18 @@
 "use client"
 
-import * as React from "react"
-import { type HTMLMotionProps, motion, type Transition } from "motion/react"
-
 import {
-  TooltipProvider,
   Tooltip,
-  TooltipTrigger,
-  TooltipContent,
   TooltipArrow,
-  type TooltipProviderProps,
-  type TooltipProps,
-  type TooltipContentProps,
   type TooltipArrowProps,
+  TooltipContent,
+  type TooltipContentProps,
+  type TooltipProps,
+  TooltipProvider,
+  type TooltipProviderProps,
+  TooltipTrigger,
 } from "@repo/ui/components/animate-ui/primitives/animate/tooltip"
+import { type HTMLMotionProps, motion, type Transition } from "motion/react"
+import * as React from "react"
 
 type AvatarProps = Omit<HTMLMotionProps<"div">, "translate"> & {
   children: React.ReactNode

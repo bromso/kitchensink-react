@@ -1,12 +1,11 @@
 "use client"
 
-import * as React from "react"
-import { RadioGroup as RadioGroupPrimitive } from "@base-ui-components/react/radio-group"
 import { Radio as RadioPrimitive } from "@base-ui-components/react/radio"
-import { AnimatePresence, motion, type HTMLMotionProps } from "motion/react"
-
-import { getStrictContext } from "@repo/ui/lib/get-strict-context"
+import { RadioGroup as RadioGroupPrimitive } from "@base-ui-components/react/radio-group"
 import { useControlledState } from "@repo/ui/hooks/use-controlled-state"
+import { getStrictContext } from "@repo/ui/lib/get-strict-context"
+import { AnimatePresence, type HTMLMotionProps, motion } from "motion/react"
+import * as React from "react"
 
 type RadioGroupContextType = {
   value: RadioGroupProps["value"]

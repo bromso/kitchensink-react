@@ -1,18 +1,17 @@
 "use client"
 
-import * as React from "react"
 import { Menu as MenuPrimitive } from "@base-ui-components/react/menu"
-import { AnimatePresence, motion, type HTMLMotionProps } from "motion/react"
-
 import {
   Highlight,
   HighlightItem,
   type HighlightItemProps,
   type HighlightProps,
 } from "@repo/ui/components/animate-ui/primitives/effects/highlight"
-import { getStrictContext } from "@repo/ui/lib/get-strict-context"
 import { useControlledState } from "@repo/ui/hooks/use-controlled-state"
 import { useDataState } from "@repo/ui/hooks/use-data-state"
+import { getStrictContext } from "@repo/ui/lib/get-strict-context"
+import { AnimatePresence, type HTMLMotionProps, motion } from "motion/react"
+import * as React from "react"
 
 type MenuActiveValueContextType = {
   highlightedValue: string | null

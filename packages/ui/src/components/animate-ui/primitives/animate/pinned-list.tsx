@@ -1,10 +1,9 @@
 "use client"
 
-import * as React from "react"
-import { motion, LayoutGroup, AnimatePresence, type HTMLMotionProps } from "motion/react"
-
 import { Slot, type WithAsChild } from "@repo/ui/components/animate-ui/primitives/animate/slot"
 import { getStrictContext } from "@repo/ui/lib/get-strict-context"
+import { AnimatePresence, type HTMLMotionProps, LayoutGroup, motion } from "motion/react"
+import * as React from "react"
 
 type PinnedListContextType = {
   movingId: string | null

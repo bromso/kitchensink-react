@@ -1,21 +1,20 @@
 "use client"
 
-import type * as React from "react"
 import {
-  Popover as PopoverPrimitive,
-  PopoverButton as PopoverButtonPrimitive,
-  PopoverPanel as PopoverPanelPrimitive,
   PopoverBackdrop as PopoverBackdropPrimitive,
-  PopoverGroup as PopoverGroupPrimitive,
-  type PopoverProps as PopoverPrimitiveProps,
-  type PopoverButtonProps as PopoverButtonPrimitiveProps,
-  type PopoverPanelProps as PopoverPanelPrimitiveProps,
   type PopoverBackdropProps as PopoverBackdropPrimitiveProps,
+  PopoverButton as PopoverButtonPrimitive,
+  type PopoverButtonProps as PopoverButtonPrimitiveProps,
+  PopoverGroup as PopoverGroupPrimitive,
   type PopoverGroupProps as PopoverGroupPrimitiveProps,
+  PopoverPanel as PopoverPanelPrimitive,
+  type PopoverPanelProps as PopoverPanelPrimitiveProps,
+  Popover as PopoverPrimitive,
+  type PopoverProps as PopoverPrimitiveProps,
 } from "@headlessui/react"
-import { AnimatePresence, motion, type HTMLMotionProps, type Transition } from "motion/react"
-
 import { getStrictContext } from "@repo/ui/lib/get-strict-context"
+import { AnimatePresence, type HTMLMotionProps, motion, type Transition } from "motion/react"
+import type * as React from "react"
 
 type PopoverContextType = {
   isOpen: boolean

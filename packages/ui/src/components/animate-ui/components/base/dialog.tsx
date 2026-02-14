@@ -1,28 +1,26 @@
-
-import { XIcon } from "lucide-react"
-
 import {
-  Dialog as DialogPrimitive,
-  DialogPopup as DialogPopupPrimitive,
-  DialogDescription as DialogDescriptionPrimitive,
-  DialogFooter as DialogFooterPrimitive,
-  DialogHeader as DialogHeaderPrimitive,
-  DialogTitle as DialogTitlePrimitive,
-  DialogTrigger as DialogTriggerPrimitive,
-  DialogPortal as DialogPortalPrimitive,
   DialogBackdrop as DialogBackdropPrimitive,
-  DialogClose as DialogClosePrimitive,
-  type DialogProps as DialogPrimitiveProps,
-  type DialogPopupProps as DialogPopupPrimitiveProps,
-  type DialogDescriptionProps as DialogDescriptionPrimitiveProps,
-  type DialogFooterProps as DialogFooterPrimitiveProps,
-  type DialogHeaderProps as DialogHeaderPrimitiveProps,
-  type DialogTitleProps as DialogTitlePrimitiveProps,
-  type DialogTriggerProps as DialogTriggerPrimitiveProps,
   type DialogBackdropProps as DialogBackdropPrimitiveProps,
+  DialogClose as DialogClosePrimitive,
   type DialogCloseProps as DialogClosePrimitiveProps,
+  DialogDescription as DialogDescriptionPrimitive,
+  type DialogDescriptionProps as DialogDescriptionPrimitiveProps,
+  DialogFooter as DialogFooterPrimitive,
+  type DialogFooterProps as DialogFooterPrimitiveProps,
+  DialogHeader as DialogHeaderPrimitive,
+  type DialogHeaderProps as DialogHeaderPrimitiveProps,
+  DialogPopup as DialogPopupPrimitive,
+  type DialogPopupProps as DialogPopupPrimitiveProps,
+  DialogPortal as DialogPortalPrimitive,
+  Dialog as DialogPrimitive,
+  type DialogProps as DialogPrimitiveProps,
+  DialogTitle as DialogTitlePrimitive,
+  type DialogTitleProps as DialogTitlePrimitiveProps,
+  DialogTrigger as DialogTriggerPrimitive,
+  type DialogTriggerProps as DialogTriggerPrimitiveProps,
 } from "@repo/ui/components/animate-ui/primitives/base/dialog"
 import { cn } from "@repo/ui/lib/utils"
+import { XIcon } from "lucide-react"
 
 type DialogProps = DialogPrimitiveProps
 

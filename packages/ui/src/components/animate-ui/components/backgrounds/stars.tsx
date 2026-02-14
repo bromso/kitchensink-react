@@ -1,16 +1,15 @@
 "use client"
 
-import * as React from "react"
+import { cn } from "@repo/ui/lib/utils"
 import {
   type HTMLMotionProps,
   motion,
-  useMotionValue,
-  useSpring,
   type SpringOptions,
   type Transition,
+  useMotionValue,
+  useSpring,
 } from "motion/react"
-
-import { cn } from "@repo/ui/lib/utils"
+import * as React from "react"
 
 type StarLayerProps = HTMLMotionProps<"div"> & {
   count: number

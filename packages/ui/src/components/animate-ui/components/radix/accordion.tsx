@@ -1,18 +1,16 @@
-
-import { ChevronDownIcon } from "lucide-react"
-
 import {
-  Accordion as AccordionPrimitive,
-  AccordionItem as AccordionItemPrimitive,
-  AccordionHeader as AccordionHeaderPrimitive,
-  AccordionTrigger as AccordionTriggerPrimitive,
   AccordionContent as AccordionContentPrimitive,
-  type AccordionProps as AccordionPrimitiveProps,
-  type AccordionItemProps as AccordionItemPrimitiveProps,
-  type AccordionTriggerProps as AccordionTriggerPrimitiveProps,
   type AccordionContentProps as AccordionContentPrimitiveProps,
+  AccordionHeader as AccordionHeaderPrimitive,
+  AccordionItem as AccordionItemPrimitive,
+  type AccordionItemProps as AccordionItemPrimitiveProps,
+  Accordion as AccordionPrimitive,
+  type AccordionProps as AccordionPrimitiveProps,
+  AccordionTrigger as AccordionTriggerPrimitive,
+  type AccordionTriggerProps as AccordionTriggerPrimitiveProps,
 } from "@repo/ui/components/animate-ui/primitives/radix/accordion"
 import { cn } from "@repo/ui/lib/utils"
+import { ChevronDownIcon } from "lucide-react"
 
 type AccordionProps = AccordionPrimitiveProps
 
